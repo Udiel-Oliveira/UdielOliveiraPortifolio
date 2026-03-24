@@ -15,6 +15,12 @@ export default function NavBar() {
   const [hidden, setHidden] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const lastScrollY = useRef(0);
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  useEffect(() => {
+    // Inicia animação da nav logo no mount
+    setIsNavOpen(true);
+  }, []);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
@@ -56,7 +62,9 @@ export default function NavBar() {
     id === activeSection ? "secondary" : "primary";
 
   const navButtonClass = (id: string) =>
-    id === activeSection ? "text-[var(--color-white)]" : "text-[var(--color-dark)]";
+    id === activeSection
+      ? "text-[var(--color-white)]"
+      : "text-[var(--color-dark)]";
 
   return (
     <nav
@@ -75,13 +83,39 @@ export default function NavBar() {
         />
       </div>
 
-      <div className={Styles.navLinks}>
-        <Button href="#hero" icon={<Home />} variant={navButtonVariant("hero")} className={navButtonClass("hero")}>Inicio</Button>
-        <Button href="#about" icon={<File />} variant={navButtonVariant("about")} className={navButtonClass("about")}>Sobre</Button>
-        <Button href="#certifications" icon={<Trophy />} variant={navButtonVariant("certifications")} className={navButtonClass("certifications")}>
+      <div className={`${Styles.navLinks} ${isNavOpen ? Styles.open : ""} ${isNavOpen ? Styles.animate : ""}`}>
+        <Button
+          href="#hero"
+          icon={<Home />}
+          variant={navButtonVariant("hero")}
+          className={navButtonClass("hero")}
+        >
+          Inicio
+        </Button>
+        <Button
+          href="#about"
+          icon={<File />}
+          variant={navButtonVariant("about")}
+          className={navButtonClass("about")}
+        >
+          Sobre
+        </Button>
+        <Button
+          href="#certifications"
+          icon={<Trophy />}
+          variant={navButtonVariant("certifications")}
+          className={navButtonClass("certifications")}
+        >
           Certifications
         </Button>
-        <Button href="#projects" icon={<Coffee />} variant={navButtonVariant("projects")} className={navButtonClass("projects")}>Projects</Button>
+        <Button
+          href="#projects"
+          icon={<Coffee />}
+          variant={navButtonVariant("projects")}
+          className={navButtonClass("projects")}
+        >
+          Projects
+        </Button>
       </div>
 
       <div className={Styles.languageSwitcher}>

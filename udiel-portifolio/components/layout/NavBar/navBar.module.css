@@ -11,6 +11,7 @@
   scroll-behavior: smooth;
 }
 
+/* OFICIAL
 .navLinks {
   display: flex;
   align-items: center;
@@ -18,7 +19,48 @@
   border-radius: 500px;
   padding: 0.15rem;
 }
+*/
 .languageSwitcher {
   display: flex;
   padding: 0.15rem;
+}
+@keyframes expandNav {
+  0% {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+  }
+  100% {
+    width: 545px;
+    height: auto;
+    border-radius: 500px;
+    padding: 0.15rem;
+  }
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-white);
+  overflow: hidden;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  transition:
+    width 0.35s ease,
+    height 0.35s ease,
+    border-radius 0.35s ease,
+    padding 0.35s ease;
+}
+
+.navLinks.open {
+  width: 300px;
+  height: auto;
+  border-radius: 500px;
+  padding: 0.15rem;
+}
+
+.navLinks.animate {
+  animation: expandNav 0.8s ease forwards;
 }
