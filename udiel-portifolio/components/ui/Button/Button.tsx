@@ -24,15 +24,15 @@ export default function Button({
   className,
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-evenly px-4 gap-2 py-4 rounded-full font-medium transition-colors";
+    "inline-flex items-center justify-evenly px-4 gap-2 py-4 rounded-full font-medium transition-colors uppercase text-sm";
 
   const variants: Record<ButtonVariant, string> = {
     primary:
-      "bg-[var(--color-white)] text-[var(--color-dark)] hover:bg-[var(--color-dark)] hover:text-[var(--color-white)]",
+      "bg-[var(--color-white)] text-[var(--color-dark)] hover:bg-[var(--color-gray-light)] hover:text-[var(--color-dark)]",
     secondary:
-      "bg-[var(--color-dark)] text-white hover:bg-[var(--color-white)] hover:text-[var(--color-dark)]",
+      "bg-[var(--color-dark)] text-white hover:bg-[var(--color-gray-light)] hover:text-[var(--color-dark)]",
     outline:
-      "border border-[var(--color-dark)] text-[var(--color-dark)] hover:bg-[var(--color-offwhite)]",
+      "border border-[var(--color-dark)] text-[var(--color-dark)] hover:bg-[var(--color-gray-light)]",
   };
 
   return (

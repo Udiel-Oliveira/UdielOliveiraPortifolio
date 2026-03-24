@@ -52,8 +52,11 @@ export default function NavBar() {
     };
   }, []);
 
+  const navButtonVariant = (id: string) =>
+    id === activeSection ? "secondary" : "primary";
+
   const navButtonClass = (id: string) =>
-    id === activeSection ? "text-green-500" : "bg-[var(--color-dark)]";
+    id === activeSection ? "text-[var(--color-white)]" : "text-[var(--color-dark)]";
 
   return (
     <nav
@@ -73,16 +76,15 @@ export default function NavBar() {
       </div>
 
       <div className={Styles.navLinks}>
-        <Button href="#hero" icon={<Home />} className={navButtonClass("hero")}>Inicio</Button>
-        <Button href="#about" icon={<File />} className={navButtonClass("about")}>Sobre</Button>
-        <Button href="#certifications" icon={<Trophy />} className={navButtonClass("certifications")}>
+        <Button href="#hero" icon={<Home />} variant={navButtonVariant("hero")} className={navButtonClass("hero")}>Inicio</Button>
+        <Button href="#about" icon={<File />} variant={navButtonVariant("about")} className={navButtonClass("about")}>Sobre</Button>
+        <Button href="#certifications" icon={<Trophy />} variant={navButtonVariant("certifications")} className={navButtonClass("certifications")}>
           Certifications
         </Button>
-        <Button href="#projects" icon={<Coffee />} className={navButtonClass("projects")}>Projects</Button>
+        <Button href="#projects" icon={<Coffee />} variant={navButtonVariant("projects")} className={navButtonClass("projects")}>Projects</Button>
       </div>
 
       <div className={Styles.languageSwitcher}>
-        <Button href="#" variant="outline">EN</Button>
         <img src="/assets/UDIEL[LOGO].svg" alt="" />
       </div>
     </nav>
