@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Styles from "./Button.module.css";
 
 type ButtonVariant = "primary" | "secondary" | "outline";
 
@@ -11,6 +12,7 @@ interface ButtonProps {
   target?: string;
   rel?: string;
   className?: string;
+  onClick?: () => void;
 }
 
 export default function Button({
@@ -22,9 +24,10 @@ export default function Button({
   target,
   rel,
   className,
+  onClick,
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-evenly px-4 gap-2 py-4 rounded-full font-medium transition-colors uppercase text-sm";
+    "inline-flex items-center justify-evenly px-4 gap-2 py-4 rounded-full font-medium transition-colors uppercase text-x";
 
   const variants: Record<ButtonVariant, string> = {
     primary:
@@ -41,7 +44,8 @@ export default function Button({
       download={download}
       target={target}
       rel={rel}
-      className={`${baseStyles} ${variants[variant]} ${className ?? ""}`.trim()}
+      onClick={onClick ? (e) => { e.preventDefault(); onClick(); } : undefined}
+      className={`${Styles.base} ${baseStyles} ${variants[variant]} ${className ?? ""}`.trim()}
     >
       {icon && <span className="text-lg">{icon}</span>}
       {children}
