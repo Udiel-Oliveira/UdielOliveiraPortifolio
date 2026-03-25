@@ -1,0 +1,54 @@
+{
+    "javascript": {
+        "name": "JavaScript",
+        "icon": "javascriptIcon.svg"
+    },
+    "html": {
+        "name": "HTML",
+        "icon": "htmlIcon.svg"
+    },
+    "css": {
+        "name": "CSS",
+        "icon": "cssIcon.svg"
+    },
+    "git": {
+        "name": "Git",
+        "icon": "gitIcon.svg"
+    },
+    "intellij": {
+        "name": "IntelliJ",
+        "icon": "inteliJIcon.svg"
+    },
+    "nextjs": {
+        "name": "Next.js",
+        "icon": "nextjsIcon.svg"
+    },
+    "nodejs": {
+        "name": "Node.js",
+        "icon": "nodeIcon.svg"
+    },
+    "postman": {
+        "name": "Postman",
+        "icon": "postmanIcon.svg"
+    },
+    "vscode": {
+        "name": "VS Code",
+        "icon": "vsCodeIcon.svg"
+    },
+    "react": {
+        "name": "React",
+        "icon": "reactIcon.svg"
+    },
+    "typescript": {
+        "name": "TypeScript",
+        "icon": "typescriptIcon.svg"
+    },
+    "tailwindcss": {
+        "name": "Tailwind CSS",
+        "icon": "tailwindIcon.svg"
+    },
+    "gsap": {
+        "name": "GSAP",
+        "icon": "gsapIcon.svg"
+    }
+}
