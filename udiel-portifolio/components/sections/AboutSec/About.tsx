@@ -1,12 +1,28 @@
+import Badge from "@/components/ui/Badge";
 import Styles from "./About.module.css";
+import Description from "@/components/ui/Description";
 
-export default function About(){
-    return (
-        <section id="about" className={Styles.section}>
-            <h1 className={Styles.title}>About Me</h1>
-            <p className={Styles.description}>
-                I'm a passionate software developer with experience in building web applications using modern technologies. I enjoy learning new programming languages and frameworks, and I'm always looking for opportunities to grow my skills and contribute to exciting projects.
-            </p>
-        </section>
-    );
+export default function About() {
+  return (
+    <section id="about" className={Styles.section}>
+      <div className={Styles.aboutContainer}>
+        <h1 className={Styles.title}>Resumo Profissional</h1>
+        <div className={Styles.skills}>
+          <Badge id="javascript" />
+          <Badge id="react" />
+          <Badge id="nodejs" />
+          <Badge id="typescript" />
+          <Badge id="html" />
+          <Badge id="css" />
+          <Badge id="git" />
+          <Badge id="intellij" />
+          <Badge id="nextjs" />
+          <Badge id="postman" />
+          <Badge id="vscode" />
+        </div>
+        <Description/>
+        <img src="assets/3d-assets/PC.png" alt="" className={Styles.image} />
+      </div>
+    </section>
+  );
 }
