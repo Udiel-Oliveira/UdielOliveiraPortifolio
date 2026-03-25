@@ -8,7 +8,7 @@
   --color-dark: #1F1F1F;
   --color-white: #FFFFFF;
   --color-gray-light: #C7C7C7;
-  --color-blue-light: #E0F6FF;
+  --color-blue-light: #ace8ff;
   --color-green-neon: #55FF00;
   --color-green-pastel: #E8FFDC;
   --color-offwhite: #FBFBFB;
@@ -36,9 +36,9 @@
 }
 
 body {
-  background: var(--background);
+  background: var(--color-green-neon);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Jaldi", Helvetica, sans-serif;
 }
 html {
   scroll-behavior: smooth;

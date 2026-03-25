@@ -28,10 +28,10 @@
   0% {
     width: 60px;
     height: 60px;
-    border-radius: 100%;
+    border-radius: 999px;
   }
   100% {
-    width: 545px;
+    width: 510px;
     height: auto;
     border-radius: 500px;
     padding: 0.15rem;
@@ -43,9 +43,7 @@
   align-items: center;
   background-color: var(--color-white);
   overflow: hidden;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  border-radius: 999px;
   padding: 0;
   transition:
     width 0.35s ease,

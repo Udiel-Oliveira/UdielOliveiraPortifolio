@@ -1,0 +1,11 @@
+.quote {
+  font-size: 2.5rem;
+  font-family: var(--font-sans);
+  color: var(--color-dark);
+  text-align: center;
+  line-height: 3rem;
+  font-weight: bold;
+  width: 75%;
+  z-index: 1;
+}
+
