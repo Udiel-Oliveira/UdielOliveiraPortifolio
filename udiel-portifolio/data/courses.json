@@ -1,0 +1,20 @@
+{
+    "curso1":{
+        "nome": "Java Collections - Dominando listas, sets e mapas",
+        "instituicao": "Alura",
+        "link": "https://www.alura.com.br/cursos/java-collections",
+        "status": "Concluído"
+    },
+    "curso2":{
+        "nome": "JavaScript: Programação Assíncrona com Promises e Async/Await",
+        "instituicao": "Alura",
+        "link": "https://www.alura.com.br/cursos/javascript-programacao-assincrona-promises-async-await",
+        "status": "Concluído"
+    },
+    "curso3":{
+        "nome": "Git e GitHub: Controle de Versão para Iniciantes",
+        "instituicao": "Alura",
+        "link": "https://www.alura.com.br/cursos/git-github-controle-de-versao-iniciantes",
+        "status": "Concluído"
+    }
+}

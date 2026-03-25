@@ -1,0 +1,55 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "category": "Landing Page",
+      "title": "Portfólio Pessoal",
+      "iconProject": "https://cdn-icons-png.flaticon.com/512/5968/5968322.png",
+      "description": "Um portfólio pessoal desenvolvido com Next.js, Tailwind CSS e GSAP para mostrar minhas habilidades e projetos. O design é moderno e responsivo, com animações suaves para uma experiência de usuário envolvente.",
+      "image": "/assets/portfolio.png",
+      "link": "https://seu-portifolio.com",
+      "github": "https://github.com/seu-usuario/portifolio",
+      "tecnologias": ["nextjs","react" ,"tailwindcss", "gsap", "typescript"],
+      "video": "https://www.youtube.com/watch?v=4gB_sJBdG1w",
+      "Imagens": [
+        "https://tse1.mm.bing.net/th/id/OIP.SfwquxdzYtWlxVI61OJ4SQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
+        "https://portal.redevix.com/wp-content/uploads/2026/03/mauricio-meirelles-surto-coletivo-vitoria-2-1024x576.webp",
+        "https://agoranovale.com.br/wp-content/uploads/2025/05/1-Paul-Cabannes-vem-ao-Teatro-Univates-em-agosto-para-apresentar-show-de-stand-up-inspirado-no-Brasil.-Credito_-Divulgacao.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "category": "E-commerce",
+      "title": "Loja Virtual de Roupas",
+      "iconProject": "https://cdn-icons-png.flaticon.com/512/891/891462.png",
+      "description": "Um e-commerce completo para venda de roupas, desenvolvido com React, Node.js e Stripe para pagamentos. Inclui carrinho de compras dinâmico, autenticação de usuários e painel administrativo.",
+      "image": "/assets/ecommerce.png",
+      "link": "https://loja-virtual-demo.vercel.app",
+      "github": "https://github.com/seu-usuario/ecommerce",
+      "tecnologias": ["react", "nodejs"],
+      "video": "https://www.youtube.com/watch?v=4WvT7pQXc5c",
+      "Imagens": [
+        "/assets/ecommerce1.png",
+        "/assets/ecommerce2.png",
+        "/assets/ecommerce3.png"
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Aplicativo Web",
+      "title": "App de Finanças Pessoais",
+      "iconProject": "https://cdn-icons-png.flaticon.com/512/1170/1170576.png",
+      "description": "Aplicativo web para controle financeiro pessoal, desenvolvido com Next.js, Chart.js e Firebase. Permite cadastrar despesas e receitas, gerar gráficos interativos e acompanhar o saldo em tempo real.",
+      "image": "/assets/financas.png",
+      "link": "https://financas-app-demo.vercel.app",
+      "github": "https://github.com/seu-usuario/financas-app",
+      "tecnologias": ["nextjs", "firebase", "chartjs"],
+      "video": "https://www.youtube.com/watch?v=5t9zR7XQwzY",
+      "Imagens": [
+        "/assets/financas1.png",
+        "/assets/financas2.png",
+        "/assets/financas3.png"
+      ]
+    }
+  ]
+}
