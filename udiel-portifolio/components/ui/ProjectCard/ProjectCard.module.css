@@ -1,0 +1,135 @@
+.section {
+    width: 100%;
+}
+.projectCard{
+    display: flex;
+  gap: 3rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 80%;
+  min-height: 100vh;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  gap: 1rem;
+  flex: 1.2;
+}
+
+.video {
+  background-color: var(--color-gray-light);
+  border-radius: 0.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-dark);
+  font-weight: bold;
+}
+.iframe{
+    aspect-ratio: 16/9;
+     border-radius: 0.5rem;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+.images img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex: 1;
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.projectTitle{
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.projectCategory {
+  font-size: 0.875rem;
+  color: var(--color-gray-medium);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.projectName {
+  font-size: 2.5rem;
+  font-family: "Jaldi", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  margin: 0;
+}
+
+.projectIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.projectIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projectDescription {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--color-dark);
+  text-align: justify;
+  margin: 0;
+}
+
+.projectTech {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: #323232;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  width: fit-content;
+}
+
+.projectTech h3 {
+  font-size: 1.25rem;
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.projectLinks {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
