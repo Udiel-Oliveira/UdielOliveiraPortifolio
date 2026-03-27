@@ -1,0 +1,161 @@
+.card {
+  align-items: center;  
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  scrollbar-gutter: stable overlay;
+}
+.header {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-dark);
+  justify-content: center;
+}
+.title {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Tabs styles */
+.tabs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(--color-dark);
+  overflow-x: auto;
+  border-radius: 0px 0px 1rem 1rem;
+}
+
+.tabButton {
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  border: none;
+  color: var(--color-gray-medium);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+}
+
+.tabButton:hover {
+  color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.tabActive {
+  color: var(--color-dark);
+  background-color: var(--color-white);
+}
+.table {
+  height: 100%;
+  width: 100%;
+}
+.tableHead {
+  width: 100%;
+}
+.tableHead tr {
+  display: table;
+  width: 100%;
+  border-radius: 20px;
+  background-color: transparent;
+}
+.tableBody {
+  display: block;
+  height: 100%;
+  overflow-y: scroll;
+  scrollbar-gutter: stable overlay;
+  border-radius: 1rem;
+}
+.tableBody::-webkit-scrollbar-track {
+  background: transparent;
+}
+.tableBody::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+.tableCell {
+  color: #fff;
+  height: 25px;
+  padding: 1rem;
+  width: 100%;
+}
+
+.tableBody tr {
+  display: table;
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+  background-color: var(--color-dark);
+}
+
+.tableCellTitle,
+.tableCellNome {
+  color: var(--color-white);
+  height: 25px;
+  padding: 1rem;
+  text-align: left;
+  width: 50%;
+  text-transform: uppercase;
+}
+.tableCellStats {
+  color: var(--color-white);
+  height: 25px;
+  padding: 1rem;
+  text-align: center;
+  width: 25%;
+  text-transform: uppercase;
+}
+.tableCellLinkName {
+  color: var(--color-white);
+  height: 25px;
+  padding: 1rem;
+  text-align: center;
+  width: 25%;
+  text-transform: uppercase;
+}
+
+.tableCellStatus {
+  color: var(--color-white);
+  height: 25px;
+  padding: 1rem;
+  text-align: center;
+  width: 25%;
+  border-radius: 999px;
+  margin: 1rem;
+}
+.statusIndicator {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #e8ffdc;
+  border-radius: 999px;
+  color: #55ff00;
+}
+.tableCellLink {
+  color: var(--color-white);
+  height: 25px;
+  padding: 1rem;
+  text-align: end;
+  width: 25%;
+}
+.linkButton {
+  padding: 0.5rem;
+}
+.linkButton:hover {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
