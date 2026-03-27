@@ -13,6 +13,7 @@
   --color-green-pastel: #E8FFDC;
   --color-offwhite: #FBFBFB;
   --color-gray-medium: #A8A8A8;
+  --color-gray-dark: #181818;
 }
 
 @theme inline {
@@ -36,10 +37,24 @@
 }
 
 body {
-  background: var(--color-green-neon);
+  background: transparent;
   color: var(--foreground);
   font-family: "Jaldi", Helvetica, sans-serif;
+  scrollbar-gutter: stable overlay;
 }
 html {
   scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background:var(--color-gray-offwhite);
+  
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-);
+  border-radius: 4px;
 }

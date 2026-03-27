@@ -1,20 +1,147 @@
 {
-    "curso1":{
-        "nome": "Java Collections - Dominando listas, sets e mapas",
-        "instituicao": "Alura",
-        "link": "https://www.alura.com.br/cursos/java-collections",
-        "status": "Concluído"
-    },
-    "curso2":{
-        "nome": "JavaScript: Programação Assíncrona com Promises e Async/Await",
-        "instituicao": "Alura",
-        "link": "https://www.alura.com.br/cursos/javascript-programacao-assincrona-promises-async-await",
-        "status": "Concluído"
-    },
-    "curso3":{
-        "nome": "Git e GitHub: Controle de Versão para Iniciantes",
-        "instituicao": "Alura",
-        "link": "https://www.alura.com.br/cursos/git-github-controle-de-versao-iniciantes",
-        "status": "Concluído"
-    }
+"curso1": {
+  "nome": "Lógica de programação: laços e listas com JavaScript",
+  "instituicao": "Alura",
+  "imagem": "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
+  "link": "https://www.alura.com.br/cursos/logica-programacao-lacos-listas-javascript",
+  "descricao": "Aprenda a trabalhar com laços e listas em JavaScript para estruturar melhor seus programas.",
+  "status": "Concluído"
+},
+"curso2": {
+  "nome": "Lógica de programação: trabalhando com o jogo Pong",
+  "instituicao": "Alura",
+  "imagem": "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
+  "link": "https://www.alura.com.br/cursos/logica-programacao-jogo-pong",
+  "descricao": "Construa o clássico jogo Pong enquanto aprende lógica de programação.",
+  "status": "Concluído"
+},
+"curso3": {
+  "nome": "HTML5 e CSS3 parte 1: Crie uma página da Web",
+  "instituicao": "Alura",
+  "imagem": "https://cdn-icons-png.flaticon.com/512/732/732212.png",
+  "link": "https://www.alura.com.br/cursos/html5-css3-crie-pagina-web",
+  "descricao": "Introdução ao HTML5 e CSS3 criando sua primeira página web.",
+  "status": "Concluído"
+},
+"curso4": {
+  "nome": "HTML5 e CSS3 parte 2: Posicionamento, listas e navegação",
+  "instituicao": "Alura",
+  "imagem": "https://cdn-icons-png.flaticon.com/512/732/732212.png",
+  "link": "https://www.alura.com.br/cursos/html5-css3-posicionamento-listas-navegacao",
+  "descricao": "Aprenda técnicas de posicionamento e navegação com HTML e CSS.",
+  "status": "Concluído"
+},
+"curso5": {
+  "nome": "HTML5 e CSS3 parte 3: Trabalhando com formulários e tabelas",
+  "instituicao": "Alura",
+  "imagem": "https://cdn-icons-png.flaticon.com/512/732/732212.png",
+  "link": "https://www.alura.com.br/cursos/html5-css3-formularios-tabelas",
+  "descricao": "Crie formulários e tabelas acessíveis com HTML5 e CSS3.",
+  "status": "Concluído"
+},
+"curso6": {
+  "nome": "HTML5 e CSS3 parte 4: Avançando no CSS",
+  "instituicao": "Alura",
+  "imagem": "https://cdn-icons-png.flaticon.com/512/732/732212.png",
+  "link": "https://www.alura.com.br/cursos/html5-css3-avancando-css",
+  "descricao": "Aprofunde seus conhecimentos em CSS para criar layouts mais sofisticados.",
+  "status": "Concluído"
+},
+"curso7": {
+  "nome": "Git e GitHub: Repositório, commit e versões",
+  "instituicao": "Alura",
+  "imagem": "https://cdn-icons-png.flaticon.com/512/5968/5968322.png",
+  "link": "https://www.alura.com.br/cursos/git-github-repositorio-commit-versoes",
+  "descricao": "Aprenda a criar repositórios, realizar commits e gerenciar versões com Git e GitHub.",
+  "status": "Concluído"
+},
+"curso8": {
+  "nome": "Git e GitHub: Controle e compartilhe seu código",
+  "instituicao": "Alura",
+  "imagem": "https://cdn-icons-png.flaticon.com/512/5968/5968322.png",
+  "link": "https://www.alura.com.br/cursos/git-github-controle-compartilhe-codigo",
+  "descricao": "Domine o controle de versão e compartilhe seus projetos com GitHub.",
+  "status": "Concluído"
+},
+"curso9": {
+  "nome": "Formação Front End",
+  "instituicao": "Alura",
+  "imagem": "https://cdn-icons-png.flaticon.com/512/919/919828.png",
+  "link": "https://www.alura.com.br/formacao-front-end",
+  "descricao": "Formação completa em desenvolvimento Front End com HTML, CSS e JavaScript.",
+  "status": "Concluído"
+},
+"curso10": {
+  "nome": "Formação Pratique HTML e CSS",
+  "instituicao": "Alura",
+  "imagem": "https://cdn-icons-png.flaticon.com/512/919/919827.png",
+  "link": "https://www.alura.com.br/formacao-pratique-html-css",
+  "descricao": "Pratique e consolide seus conhecimentos em HTML e CSS com projetos práticos.",
+  "status": "Concluído"
+},
+"curso11": {
+  "nome": "CCNAv7: Introdução às Redes",
+  "instituicao": "Cisco",
+  "imagem": "https://cdn-icons-png.flaticon.com/512/732/732200.png",
+  "link": "https://www.netacad.com/courses/networking/ccna-introduction-networks",
+  "descricao": "Curso introdutório sobre redes de computadores, cobrindo conceitos básicos de conectividade.",
+  "status": "Concluído"
+},
+"curso12": {
+  "nome": "Endpoint Security",
+  "instituicao": "Cisco",
+  "imagem": "https://cdn-icons-png.flaticon.com/512/3069/3069186.png",
+  "link": "https://www.netacad.com/courses/security/endpoint-security",
+  "descricao": "Aprenda práticas de segurança para proteger dispositivos e dados contra ameaças.",
+  "status": "Concluído"
+},
+"curso13": {
+  "nome": "Networking Essentials",
+  "instituicao": "Cisco",
+  "imagem": "https://cdn-icons-png.flaticon.com/512/732/732200.png",
+  "link": "https://www.netacad.com/courses/networking/networking-essentials",
+  "descricao": "Fundamentos essenciais de redes, incluindo protocolos e configuração básica.",
+  "status": "Concluído"
+},
+"curso14": {
+  "nome": "Processo Criativo e Ideação",
+  "instituicao": "iTalents",
+  "imagem": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+  "link": "https://italents.com.br/cursos/processo-criativo-ideacao",
+  "descricao": "Curso voltado para estimular criatividade e ideação de soluções inovadoras.",
+  "status": "Concluído"
+},
+"curso15": {
+  "nome": "Fundamentos de UX",
+  "instituicao": "iTalents",
+  "imagem": "https://cdn-icons-png.flaticon.com/512/1828/1828884.png",
+  "link": "https://italents.com.br/cursos/fundamentos-ux",
+  "descricao": "Introdução aos princípios de experiência do usuário e design centrado em pessoas.",
+  "status": "Concluído"
+},
+"curso16": {
+  "nome": "Core Skills",
+  "instituicao": "iTalents",
+  "imagem": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+  "link": "https://italents.com.br/cursos/core-skills",
+  "descricao": "Desenvolvimento de habilidades essenciais para o mercado de trabalho moderno.",
+  "status": "Concluído"
+},
+"curso17": {
+  "nome": "Get Connected",
+  "instituicao": "Cisco",
+  "imagem": "https://cdn-icons-png.flaticon.com/512/732/732200.png",
+  "link": "https://www.netacad.com/courses/get-connected",
+  "descricao": "Curso introdutório da Cisco sobre fundamentos de tecnologia e conectividade digital.",
+  "status": "Concluído"
+},
+"curso18": {
+  "nome": "ARD - Certificado",
+  "instituicao": "iTalents",
+  "imagem": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+  "link": "#",
+  "descricao": "Certificação ARD concluída, comprovando participação e aproveitamento no programa.",
+  "status": "Concluído"
+}
+
 }

@@ -5,7 +5,7 @@ type ButtonVariant = "primary" | "secondary" | "outline";
 
 interface ButtonProps {
   children?: ReactNode;
-  href: string;
+  href?: string;
   download?: boolean;
   icon?: ReactNode;
   variant?: ButtonVariant;

@@ -3,9 +3,13 @@ import badges from "@/data/badges.json"; // JSON com as informações dos badges
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button/Button";
 import projectData from "@/data/projects.json"; // JSON com as informações do projeto
-import { ArrowUpRight, GithubFill } from "akar-icons";
+import { ArrowUpRight, Cross, GithubFill } from "akar-icons";
+import { useState } from "react";
 
 export default function ProjectCard() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState("");
+
   return (
     <div id="projects" className={Styles.section}>
     {projectData.projects.map((project) => (
@@ -22,7 +26,7 @@ export default function ProjectCard() {
           </div>
           <div className={Styles.images}>
             {project.Imagens.map((image, index) => (
-              <img key={index} src={image} alt={`${project.title} screenshot ${index + 1}`} />
+              <img key={index} src={image} alt={`${project.title} screenshot ${index + 1}`} onClick={() => { setSelectedImage(image); setIsModalOpen(true); }} />
             ))}
           </div>
 
@@ -53,7 +57,7 @@ export default function ProjectCard() {
 
           <div className={Styles.projectLinks}>
             <Button icon={<ArrowUpRight />} href={project.link} target="_blank" rel="noopener noreferrer" variant="primary">
-              ver no git hub
+              Visistar Projeto
             </Button>
             <Button
               icon={<GithubFill />}
@@ -68,6 +72,14 @@ export default function ProjectCard() {
         </div>
       </div>
       ))}
+      {isModalOpen && (
+        <div className={Styles.overlay} onClick={() => setIsModalOpen(false)}>
+          <div className={Styles.modal} onClick={(e) => e.stopPropagation()}>
+            <img src={selectedImage} alt="Full screen" className={Styles.fullImage} />
+            <Button className={Styles.closeButton}  onClick={() => setIsModalOpen(false)} icon={<Cross/>} variant="primary"></Button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
