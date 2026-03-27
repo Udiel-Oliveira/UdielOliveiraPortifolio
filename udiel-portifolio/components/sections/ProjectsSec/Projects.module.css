@@ -8,3 +8,13 @@
     background: linear-gradient(330deg, var(--color-white), var(--color-blue-light));
     border-radius: 2rem 2rem 0 0;
 }
+
+/* Responsive Design */
+@media (max-width: 435px) {
+    .section {
+        flex-direction: column;
+        gap: 5rem;
+        padding: 2rem;
+        align-items: center;
+    }
+}

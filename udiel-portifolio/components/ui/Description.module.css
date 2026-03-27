@@ -9,3 +9,19 @@
   z-index: 1;
 }
 
+/* Responsive Design */
+@media (max-width: 435px) {
+    .quote {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        width: 90%;
+    }
+    .skills {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 5rem;
+        padding: 2rem;
+        align-items: center;
+        overflow-x: scroll;
+    }
+}

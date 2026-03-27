@@ -14,9 +14,9 @@
   50% {
     transform: scale(0.8);
   }
-    100% {
-        transform: scale(1);
-    }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .aboutContainer {
@@ -28,7 +28,13 @@
   border-radius: 1.5rem;
   height: 100%;
   position: relative;
-  background: radial-gradient(129% 99% at 112% 85%, var(--color-blue-light)  20%, var(--color-white) 90%),url("https://assets.codepen.io/16327/noise-e82662fe.png");
+  background:
+    radial-gradient(
+      129% 99% at 112% 85%,
+      var(--color-blue-light) 20%,
+      var(--color-white) 90%
+    ),
+    url("https://assets.codepen.io/16327/noise-e82662fe.png");
   background-blend-mode: color-dodge;
   overflow: hidden;
   gap: 2rem;
@@ -53,7 +59,6 @@
   border-radius: 999px;
 }
 
-
 .image {
   position: absolute;
   bottom: 0;
@@ -61,4 +66,18 @@
   width: 20%;
   object-fit: cover;
   border-radius: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 435px) {
+  .skills {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    padding: 2rem;
+    align-items: center;
+    overflow-x: scroll;
+    padding: 0 1rem;
+  }
 }

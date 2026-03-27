@@ -36,3 +36,14 @@
     display: flex;
     gap: 1rem;
 }
+
+/* Responsive Design */
+@media (max-width: 435px) {
+  .footer {
+    padding: 2rem;
+  }
+    .footerContainer h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+}

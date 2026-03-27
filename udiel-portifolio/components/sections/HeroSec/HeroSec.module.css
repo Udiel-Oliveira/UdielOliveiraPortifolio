@@ -34,3 +34,14 @@
     display: flex;
     gap: 1rem;
 }
+
+/* Responsive Design */
+@media (max-width: 435px) {
+    .hero h1{
+    font-size: 3.5rem;
+    line-height: 3rem;
+}
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+}
