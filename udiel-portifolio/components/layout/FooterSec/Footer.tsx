@@ -59,7 +59,7 @@ export default function Footer() {
     <footer className={Styles.footer}>
       <div className={Styles.footerContainer}>
         <img
-          src="/assets/UDIEL[LOGO].svg"
+          src="/assets/udiellogo.svg"
           alt="uma logo com as seguintes letras: Udiel"
         />
         <h1 id="quotes">
