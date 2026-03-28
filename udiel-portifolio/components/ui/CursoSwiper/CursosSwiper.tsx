@@ -8,14 +8,7 @@ import "swiper/css/pagination";
 
 import Styles from "./CursosSwiper.module.css";
 import Button from "../Button/Button";
-import {
-  ArrowUpRight,
-  Calendar,
-  Cross,
-  Diamond,
-  Enlarge,
-  Info,
-} from "akar-icons";
+import { ArrowUpRight, Calendar, Cross, Diamond, Enlarge, Info } from "akar-icons";
 
 // Importa o JSON
 import cursosObj from "@/data/courses.json";
@@ -30,7 +23,7 @@ export default function CursoSwiper() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
   const [isInfoOpen, setIsInfoOpen] = useState(false);
-  const [selectedCursoInfo, setSelectedCursoInfo] = useState(null);
+  const [selectedCursoInfo, setSelectedCursoInfo] = useState<typeof cursosDestaque[0] | null>(null);
 
   return (
     <div className={Styles.cursoSwiperContainer}>
@@ -97,6 +90,7 @@ export default function CursoSwiper() {
                   setIsModalOpen(true);
                 }}
               />
+              
             </SwiperSlide>
           ))}
         </Swiper>
@@ -113,11 +107,7 @@ export default function CursoSwiper() {
                 className={Styles.fullImage}
               />
               <div className={Styles.action}>
-                <Button
-                  icon={<Info />}
-                  onClick={() => setIsInfoOpen(true)}
-                  className={Styles.detailButton}
-                >
+                <Button icon={<Info />} onClick={() => setIsInfoOpen(true)} className={Styles.detailButton}>
                   Detalhes
                 </Button>
               </div>
@@ -171,22 +161,8 @@ export default function CursoSwiper() {
                   </div>
                 </div>
                 <div className={Styles.detailsActions}>
-                  <Button
-                    icon={<Cross />}
-                    onClick={() => {
-                      setIsInfoOpen(false);
-                    }}
-                    className={Styles.closeButtonDetailInfo}
-                  >
-                    Fechar
-                  </Button>
-                  <Button
-                    href={selectedCursoInfo.link}
-                    icon={<ArrowUpRight />}
-                    target="_blank"
-                  >
-                    Link Certificado
-                  </Button>
+                  <Button icon={<Cross />} onClick={()=>{setIsInfoOpen(false);}} className={Styles.closeButtonDetailInfo}>Fechar</Button>
+                  <Button href={selectedCursoInfo.link} icon={<ArrowUpRight />} target="_blank">Link Certificado</Button>
                 </div>
               </div>
             )}
