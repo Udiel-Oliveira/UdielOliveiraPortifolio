@@ -235,3 +235,22 @@
 .closeButtonDetailInfo{
   cursor: pointer;
 }
+@media (max-width: 500px) {
+  .modal{
+    flex-direction: column;
+    padding: 0rem;
+    gap: 1rem;
+  }
+  .modalInfoContainer {
+    width: 100%;
+    gap: 1rem;
+  }
+  .modalInfoContent {
+    padding: 1rem;
+    width: 100%;
+    gap: 1rem;
+  }
+  .modalDescription {
+    font-size: 1.2rem;
+  }
+}

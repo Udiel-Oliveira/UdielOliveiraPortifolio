@@ -12,3 +12,8 @@
         transform: translateY(0);
     }
 }
+@media (max-width: 435px) {
+    .base{
+        font-size: 0.85rem;
+    }
+}

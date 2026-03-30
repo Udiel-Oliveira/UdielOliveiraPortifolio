@@ -181,7 +181,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 435px) {
+@media (max-width: 500px) {
   .projectCard {
     display: flex;
     flex-direction: column;
@@ -196,4 +196,8 @@
   .projectName{
     line-height: 2rem;
   }
+  .projectLinks {
+  justify-content: space-between;
+}
+
 }

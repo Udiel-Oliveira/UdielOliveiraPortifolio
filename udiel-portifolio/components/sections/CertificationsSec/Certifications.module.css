@@ -29,3 +29,8 @@
   text-align: center;
   max-width: 42rem;
 }
+@media (max-width: 500px) {
+  .section {
+    padding: 2rem;
+  }
+}
