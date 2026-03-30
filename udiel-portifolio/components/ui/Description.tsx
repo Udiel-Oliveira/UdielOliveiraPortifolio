@@ -24,9 +24,9 @@ export default function Description() {
     gsap.from(split.lines, {
       scrollTrigger: {
         trigger: quote,
-        start: "top 80%", // quando o topo do elemento chega a 80% da viewport
+        start: "top 80%", 
         toggleActions: "restart pause resume reset",
-        markers: false, // se quiser ver os marcadores, troque para true
+        markers: false, 
       },
       duration: 0.6,
       yPercent: 100,
@@ -36,7 +36,7 @@ export default function Description() {
     });
 
     return () => {
-      split.revert(); // limpa o DOM ao desmontar
+      split.revert(); 
     };
   }, []);
 
