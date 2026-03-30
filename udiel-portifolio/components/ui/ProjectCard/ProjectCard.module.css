@@ -188,4 +188,12 @@
     width: 100%;
     padding: 0rem;
   }
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .projectName{
+    line-height: 2rem;
+  }
 }

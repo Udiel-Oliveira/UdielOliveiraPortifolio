@@ -7,8 +7,8 @@
       "iconProject": "https://cdn-icons-png.flaticon.com/512/5968/5968322.png",
       "description": "Um portfólio pessoal desenvolvido com Next.js, Tailwind CSS e GSAP para mostrar minhas habilidades e projetos. O design é moderno e responsivo, com animações suaves para uma experiência de usuário envolvente.",
       "image": "/assets/portfolio.png",
-      "link": "https://seu-portifolio.com",
-      "github": "https://github.com/seu-usuario/portifolio",
+      "link": "https://udielportifolio.vercel.app",
+      "github": "https://github.com/Udiel-Oliveira/UdielOliveiraPortifolio",
       "tecnologias": ["nextjs","react" ,"tailwindcss", "gsap", "typescript"],
       "video": "https://www.youtube.com/watch?v=4gB_sJBdG1w",
       "Imagens": [
