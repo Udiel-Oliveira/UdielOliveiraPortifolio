@@ -10,7 +10,7 @@ const inter = Inter({
 const jaldi = Jaldi({
   variable: "--font-jaldi",
   subsets: ["latin"],
-  weight: "400"
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -25,14 +25,24 @@ export const metadata: Metadata = {
     "TypeScript",
     "Portfólio",
   ],
-  authors: [{ name: "Udiel Oliveira", url: "https://github.com/Udiel-Oliveira" }],
+  authors: [
+    { name: "Udiel Oliveira", url: "https://github.com/Udiel-Oliveira" },
+  ],
   creator: "Udiel Oliveira",
   openGraph: {
     title: "Udiel Oliveira | Desenvolvedor Front End",
     description:
       "Conheça o portfólio de Udiel Oliveira — projetos, habilidades e formas de contato.",
-    url: "https://udielportifolio.vercel.app", 
+    url: "https://udielportifolio.vercel.app",
     siteName: "Udiel Oliveira Portfolio",
+    images: [
+      {
+        url: "https://postimg.cc/3Wdhxs6F",
+        width: 1200,
+        height: 630,
+        alt: "Udiel Oliveira Portfolio",
+      },
+    ],
     locale: "pt_BR",
     type: "website",
   },
