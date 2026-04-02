@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Udiel Oliveira Portfolio",
     images: [
       {
-        url: "https://postimg.cc/3Wdhxs6F",
+        url: "imageOG.png",
         width: 1200,
         height: 630,
         alt: "Udiel Oliveira Portfolio",
