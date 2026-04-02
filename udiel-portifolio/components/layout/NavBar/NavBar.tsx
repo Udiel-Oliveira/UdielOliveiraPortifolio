@@ -18,7 +18,6 @@ export default function NavBar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(() => {
-    // Inicia animação da nav logo no mount
     setIsNavOpen(true);
   }, []);
 
@@ -43,9 +42,9 @@ export default function NavBar() {
 
     const handleScroll = () => {
       if (window.scrollY > lastScrollY.current) {
-        setHidden(true); // rolando para baixo → esconde
+        setHidden(true); 
       } else {
-        setHidden(false); // rolando para cima → mostra
+        setHidden(false);
       }
       lastScrollY.current = window.scrollY;
     };
@@ -114,15 +113,15 @@ export default function NavBar() {
           variant={navButtonVariant("certifications")}
           className={navButtonClass("certifications")}
         >
-          Certifications
+          Certificações
         </Button>
         <Button
-          href="#projects"
+          href="#Projects"
           icon={<Coffee />}
           variant={navButtonVariant("projects")}
           className={navButtonClass("projects")}
         >
-          Projects
+          Projetos
         </Button>
       </div>
 

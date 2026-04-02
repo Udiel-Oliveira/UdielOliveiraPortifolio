@@ -11,7 +11,6 @@ gsap.registerPlugin(SplitText);
 export default function Hero() {
   useEffect(() => {
     document.fonts.ready.then(() => {
-      // Seleciona os títulos
       const h2 = document.querySelector("h2.animate-me");
       const h1 = document.querySelector("h1.animate-me");
 
@@ -34,7 +33,7 @@ export default function Hero() {
           ease: "sine.out",
           stagger: 0.1,
           y: 50,
-          delay: 0.5, // entra depois do h2
+          delay: 0.5,
         });
       }
     });
@@ -57,7 +56,7 @@ export default function Hero() {
         >
           Entre em contato
         </Button>
-        <Button href="#about" icon={<Download />} variant="secondary">
+        <Button href="#about" download={'assets/Dowload/Curriculo_Udiel_Oliveira.pdf'} icon={<Download />} variant="secondary">
           Baixar CV
         </Button>
       </div>

@@ -1,12 +1,16 @@
 import Badge from "@/components/ui/Badge";
 import Styles from "./About.module.css";
 import Description from "@/components/ui/Description";
+import Button from "@/components/ui/Button/Button";
+import { File } from "akar-icons";
 
 export default function About() {
   return (
     <section id="about" className={Styles.section}>
       <div className={Styles.aboutContainer}>
-        <h1 className={Styles.title}>Resumo Profissional</h1>
+        <Button icon={<File />} variant="title">
+          Sobre
+        </Button>
         <div className={Styles.skills}>
           <Badge id="javascript" />
           <Badge id="react" />

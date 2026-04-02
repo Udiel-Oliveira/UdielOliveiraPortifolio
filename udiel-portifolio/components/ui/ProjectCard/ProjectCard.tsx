@@ -1,8 +1,8 @@
 import Styles from "./ProjectCard.module.css";
-import badges from "@/data/badges.json"; // JSON com as informações dos badges
+import badges from "@/data/badges.json";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button/Button";
-import projectData from "@/data/projects.json"; // JSON com as informações do projeto
+import projectData from "@/data/projects.json";
 import { ArrowUpRight, Cross, GithubFill } from "akar-icons";
 import { useState } from "react";
 
@@ -11,7 +11,7 @@ export default function ProjectCard() {
   const [selectedImage, setSelectedImage] = useState("");
 
   return (
-    <div id="projects" className={Styles.section}>
+    <div className={Styles.section}>
     {projectData.projects.map((project) => (
       <div key={project.id} className={Styles.projectCard}>
         <div className={Styles.grid}>

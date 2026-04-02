@@ -6,7 +6,9 @@ import { Trophy } from "akar-icons";
 export default function Certifications() {  
     return (
         <section id="certifications" className={Styles.section}>
-            <Button icon={<Trophy/>}>Certificações</Button>
+            <Button icon={<Trophy/>} variant="title">
+                Certificações
+            </Button>
             <CursoSwiper/>
         </section>
     );

@@ -31,7 +31,7 @@
     border-radius: 999px;
   }
   100% {
-    width: 510px;
+    width: 505px;
     height: auto;
     border-radius: 500px;
     padding: 0.15rem;
@@ -82,7 +82,7 @@
     overflow-x: scroll;
   }
   .navLinks.open::-webkit-scrollbar {
-  display: none;               /* Chrome, Safari, Edge */
+  display: none;            
 }
 
   @keyframes expandNav {

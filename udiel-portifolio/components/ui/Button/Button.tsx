@@ -1,12 +1,12 @@
 import { ReactNode } from "react";
 import Styles from "./Button.module.css";
 
-type ButtonVariant = "primary" | "secondary" | "outline";
+type ButtonVariant = "primary" | "secondary" | "outline" | "title";
 
 interface ButtonProps {
   children?: ReactNode;
   href?: string;
-  download?: boolean;
+  download?: string;
   icon?: ReactNode;
   variant?: ButtonVariant;
   target?: string;
@@ -18,7 +18,7 @@ interface ButtonProps {
 export default function Button({
   children,
   href,
-  download = false,
+  download,
   icon,
   variant = "primary",
   target,
@@ -36,6 +36,8 @@ export default function Button({
       "bg-[var(--color-dark)] text-white hover:bg-[var(--color-gray-light)] hover:text-[var(--color-dark)]",
     outline:
       "border border-[var(--color-dark)] text-[var(--color-dark)] hover:bg-[var(--color-gray-light)]",
+    title:
+      "bg-[var(--color-white)] text-[var(--color-dark)] text-2xl font-bold hover:text-[var(--color-dark)]",
   };
 
   return (

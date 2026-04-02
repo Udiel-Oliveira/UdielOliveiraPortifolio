@@ -75,7 +75,7 @@ export default function Footer() {
             WhatsApp
           </Button>
         </div>
-        &copy; 2024 Udiel Oliveira. Todos os direitos reservados.
+        &copy; {new Date().getFullYear()} Udiel Oliveira. Todos os direitos reservados.
       </div>
     </footer>
   );
