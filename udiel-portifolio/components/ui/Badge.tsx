@@ -1,5 +1,6 @@
 "use client";
 import badges from "@/data/badges.json";
+import Image from "next/image";
 
 type BadgeVariants = "primary" | "secondary";
 type BadgeProps = {
@@ -22,7 +23,9 @@ export default function Badge({ id, variant = "primary" }: BadgeProps) {
     <span
       className={` ${variants[variant]} w-auto inline-flex items-center justify-center px-4 py-4 gap-2 rounded-full font-medium transition-colors uppercase text-x`}
     >
-      <img
+      <Image
+        width={5}
+        height={5}
         src={`assets/tech-Icons/${badge.icon}`}
         alt={badge.name}
         className="w-5"

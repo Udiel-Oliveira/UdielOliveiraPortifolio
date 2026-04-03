@@ -3,6 +3,7 @@ import Styles from "./About.module.css";
 import Description from "@/components/ui/Description";
 import Button from "@/components/ui/Button/Button";
 import { File } from "akar-icons";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -25,7 +26,7 @@ export default function About() {
           <Badge id="vscode" />
         </div>
         <Description/>
-        <img src="assets/3d-assets/PC.png" alt="" className={Styles.image} />
+        <Image width={100} height={100} src="/assets/3d-assets/PC.png" alt="" className={Styles.image} />
       </div>
     </section>
   );
