@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Jaldi } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -70,9 +70,11 @@ export default function RootLayout({
       lang="pt-br"
       className={`${inter.variable} ${jaldi.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <SpeedInsights />
+      </body>
       <Analytics />
-      <SpeedInsights />
     </html>
   );
 }
