@@ -10,11 +10,11 @@
       "link": "https://udielportifolio.vercel.app",
       "github": "https://github.com/Udiel-Oliveira/UdielOliveiraPortifolio",
       "tecnologias": ["nextjs","react" ,"tailwindcss", "gsap", "typescript"],
-      "video": "https://www.youtube.com/watch?v=4gB_sJBdG1w",
+      "video": "https://www.youtube.com/watch?v=4WvT7pQXc5c",
       "Imagens": [
-        "https://tse1.mm.bing.net/th/id/OIP.SfwquxdzYtWlxVI61OJ4SQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
-        "https://portal.redevix.com/wp-content/uploads/2026/03/mauricio-meirelles-surto-coletivo-vitoria-2-1024x576.webp",
-        "https://agoranovale.com.br/wp-content/uploads/2025/05/1-Paul-Cabannes-vem-ao-Teatro-Univates-em-agosto-para-apresentar-show-de-stand-up-inspirado-no-Brasil.-Credito_-Divulgacao.jpg"
+"/assets/ecommerce1.png",
+        "/assets/ecommerce2.png",
+        "/assets/ecommerce3.png"
       ]
     },
     {
