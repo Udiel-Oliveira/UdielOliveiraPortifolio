@@ -12,6 +12,7 @@ import { ArrowUpRight, Calendar, Cross, Diamond, Enlarge, Info } from "akar-icon
 
 // Importa o JSON
 import cursosObj from "@/data/courses.json";
+import Image from "next/image";
 
 const cursos = Object.values(cursosObj);
 
@@ -45,7 +46,7 @@ export default function CursoSwiper() {
       >
         {cursosDestaque.map((curso, i) => (
           <SwiperSlide key={i} className={Styles.swiperSlide}>
-            <img src={curso.imagem} alt={curso.nome} className={Styles.image} />
+            <Image width={500} height={500} src={curso.imagem} alt={curso.nome} className={Styles.image} />
             <div className={Styles.action}>
               <Button
                 icon={<Enlarge />}
@@ -80,7 +81,9 @@ export default function CursoSwiper() {
         >
           {cursosRestantes.map((curso, i) => (
             <SwiperSlide key={i} className={Styles.slideRow}>
-              <img
+              <Image
+              width={1000}
+              height={100}
                 src={curso.imagem}
                 alt={curso.nome}
                 className={Styles.image}
@@ -101,7 +104,9 @@ export default function CursoSwiper() {
         <div className={Styles.overlay} onClick={() => setIsModalOpen(false)}>
           <div className={Styles.modal} onClick={(e) => e.stopPropagation()}>
             <div className={Styles.modalImage}>
-              <img
+              <Image
+              width={1000}
+              height={1000}
                 src={selectedImage}
                 alt="Full screen"
                 className={Styles.fullImage}

@@ -1,95 +1,87 @@
+/* Container Principal */
 .cursoSwiperContainer {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
   gap: 2rem;
 }
+
+/* Swiper Destaques */
 .swiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 3;
   width: 100%;
   height: 100%;
   border-radius: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
+
 .swiperSlide {
-  text-align: center;
-  font-size: 18px;
-  background: #444;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%; /* igual ao demo */
+  text-align: center;
+  width: 60%;
   border-radius: 2rem;
   background: linear-gradient(to bottom, rgb(4, 4, 4), rgb(12, 12, 12));
+  font-size: 18px;
   overflow: hidden;
   transition: all 0.5s ease-in-out;
 }
 
 .image {
   display: block;
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: relative;
   z-index: 0;
 }
-.courserRow {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
+
+.action {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+  justify-content: flex-start;
+  align-items: flex-end;
   width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  border-radius: 1rem;
-  flex: 1;
+  height: 40%;
+  background: linear-gradient(to top, black, transparent);
+  padding: 1rem;
+  z-index: 1;
+}
+
+.enlargeButton {
   cursor: pointer;
 }
 
-.cursoItem {
+.swiperSlide:hover .action {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 200px;
-  height: 150px; /* defina altura fixa para consistência */
+}
+
+/* Row dos Cursos Restantes */
+.courserRow {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  gap: 2rem;
   border-radius: 1rem;
-  background: linear-gradient(to bottom, rgb(4, 4, 4), rgb(12, 12, 12));
-  scroll-snap-align: start; /* opcional: snap nos itens */
-  aspect-ratio: 16/9;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  cursor: pointer;
 }
 
 .scrollWrapper {
   display: flex;
+  width: 100%;
   gap: 2rem;
   border-radius: 1rem;
-  width: 100%;
-}
-
-.action {
-  position: absolute; /* fica sobre a imagem */
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40%; /* altura do gradiente */
-  display: none;
-  justify-content: flex-start;
-  align-items: flex-end;
-  background: linear-gradient(to top, black, transparent);
-  z-index: 1;
-  padding: 1rem;
-}
-.enlargeButton{
-  cursor: pointer;
-}
-.swiperSlide:hover .action {
-  display: flex;
-}
-.cursoItem:hover .action {
-  display: flex;
 }
 
 .slideRow {
@@ -97,55 +89,79 @@
   justify-content: center;
   align-items: center;
   min-width: 200px;
-  height: 150px; /* defina altura fixa para consistência */
+  aspect-ratio: 16/9;
   border-radius: 1rem;
   background: linear-gradient(to bottom, rgb(4, 4, 4), rgb(12, 12, 12));
-  scroll-snap-align: start; /* opcional: snap nos itens */
-  aspect-ratio: 16/9;
+  scroll-snap-align: start;
   overflow: hidden;
 }
 
+/* Modal */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 1000;
   animation: fadeIn 0.4s ease forwards;
 }
+
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
+
 .modal {
-  border-radius: 1rem;
-  padding: 2rem;
-  width: auto;
-  max-width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: auto;
+  max-width: 90%;
   gap: 2rem;
+  border-radius: 1rem;
+  padding: 2rem;
   animation: scaleIn 0.4s ease forwards;
 }
+
 @keyframes scaleIn {
-  from { transform: scale(0.9); opacity: 0; }
-  to   { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modalImage {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  z-index: 0;
 }
 
 .fullImage {
-  max-width: 100%;
+  width: 100%; 
   height: auto;
   border-radius: 0.5rem;
   animation: fadeIn 0.5s ease-in-out;
 }
+
 .closeButton {
   position: absolute;
   bottom: 0%;
@@ -155,43 +171,42 @@
   cursor: pointer;
 }
 
-.modalImage {
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-width: 700px;
-  object-fit: cover;
-  position: relative;
-  z-index: 0;
-  border-radius: 1rem;
-}
 .modalImage:hover .action {
   display: flex;
 }
+
 .modalInfoContainer {
   display: flex;
   justify-content: space-between;
-  height: 100%;
   flex-direction: column;
-  border-radius: 1rem;
+  width: 35%;
+  height: 100%;
   gap: 2rem;
-  width: 35%; /* respeita o conteúdo */
+  border-radius: 1rem;
   animation: slideUp 0.4s ease forwards;
 }
 
 @keyframes slideUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to   { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
+
 .modalInfoContent {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  border-radius: 1rem;
   background-color: var(--color-dark);
   width: auto;
   gap: 2rem;
+  border-radius: 1rem;
+  padding: 2rem;
 }
+
 .modalHeader {
   display: flex;
   gap: 0.5rem;
@@ -210,33 +225,40 @@
   display: flex;
   justify-content: space-between;
 }
+
 .detailsInfo p {
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
   font-weight: 200;
 }
+
 .badgeCurso {
   padding: 0.5rem 0.5rem;
   background: #2a2a2a;
   color: #fff;
 }
+
 .detailsActions {
-  width: 100%;
   display: flex;
-  padding: 0.5rem;
   justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem;
   border-radius: 999px;
   background-color: var(--color-dark);
 }
-.detailButton{
+
+.detailButton {
   cursor: pointer;
 }
-.closeButtonDetailInfo{
+
+.closeButtonDetailInfo {
   cursor: pointer;
 }
+
+/* Media Queries */
 @media (max-width: 500px) {
-  .modal{
+  .modal {
     flex-direction: column;
     padding: 0rem;
     gap: 1rem;

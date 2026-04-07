@@ -2,7 +2,7 @@
   "curso1": {
     "nome": "Lógica de programação: laços e listas com JavaScript",
     "instituicao": "Alura",
-    "imagem": "assets/certificates/LogicaOne.png",
+    "imagem": "/assets/certificates/LogicaOne.png",
     "link": "https://cursos.alura.com.br/certificate/udiel-inacio/javascript-listas-lacos",
     "descricao": "Desenvolva raciocínio lógico aprendendo a usar laços de repetição e listas em JavaScript para estruturar programas mais organizados e eficientes.",
     "status": "Concluído",
@@ -12,7 +12,7 @@
   "curso2": {
     "nome": "Lógica de programação: trabalhando com o jogo Pong",
     "instituicao": "Alura",
-    "imagem": "assets/certificates/LogicaTwo.png",
+    "imagem": "/assets/certificates/LogicaTwo.png",
     "link": "https://cursos.alura.com.br/certificate/udiel-inacio/pong-javascript",
     "descricao": "Construa o clássico jogo Pong aplicando conceitos fundamentais de lógica de programação, variáveis e funções em um projeto prático e divertido.",
     "status": "Concluído",
@@ -22,7 +22,7 @@
   "curso3": {
     "nome": "HTML5 e CSS3 parte 1: Crie uma página da Web",
     "instituicao": "Alura",
-    "imagem": "assets/certificates/html1.png",
+    "imagem": "/assets/certificates/html1.png",
     "link": "https://cursos.alura.com.br/certificate/udiel-inacio/html5-css3-primeiros-passos",
     "descricao": "Primeiro contato com desenvolvimento web: aprenda a estruturar páginas com HTML5 e aplicar estilos básicos com CSS3 para criar layouts simples e funcionais.",
     "status": "Concluído",
@@ -32,7 +32,7 @@
   "curso4": {
     "nome": "HTML5 e CSS3 parte 2: Posicionamento, listas e navegação",
     "instituicao": "Alura",
-    "imagem": "assets/certificates/html2.png",
+    "imagem": "/assets/certificates/html2.png",
     "link": "https://cursos.alura.com.br/certificate/udiel-inacio/html5-css3-posicionamento-listas-navegacao",
     "descricao": "Aprofunde seus conhecimentos em HTML e CSS aprendendo técnicas de posicionamento, criação de menus e navegação estruturada para páginas mais completas.",
     "status": "Concluído",
@@ -42,7 +42,7 @@
   "curso5": {
     "nome": "HTML5 e CSS3 parte 3: Trabalhando com formulários e tabelas",
     "instituicao": "Alura",
-    "imagem": "assets/certificates/html3.png",
+    "imagem": "/assets/certificates/html3.png",
     "link": "https://cursos.alura.com.br/certificate/udiel-inacio/html5-css3-formularios-tabelas",
     "descricao": "Aprenda a criar formulários interativos e tabelas acessíveis, aplicando boas práticas de semântica e usabilidade em HTML5 e CSS3.",
     "status": "Concluído",
@@ -52,7 +52,7 @@
   "curso6": {
     "nome": "HTML5 e CSS3 parte 4: Avançando no CSS",
     "instituicao": "Alura",
-    "imagem": "assets/certificates/html4.png",
+    "imagem": "/assets/certificates/html4.png",
     "link": "https://cursos.alura.com.br/certificate/udiel-inacio/html5-css3-avancando-css",
     "descricao": "Curso avançado de CSS3 para criar layouts sofisticados, trabalhar com pseudo-classes, pseudo-elementos e aplicar técnicas modernas de estilização.",
     "status": "Concluído",
@@ -62,7 +62,7 @@
   "curso7": {
     "nome": "Git e GitHub: Repositório, commit e versões",
     "instituicao": "Alura",
-    "imagem": "assets/certificates/githubrepositoriocommit.png",
+    "imagem": "/assets/certificates/githubrepositoriocommit.png",
     "link": "https://cursos.alura.com.br/certificate/udiel-inacio/git-github-repositorio-commit-versoes",
     "descricao": "Aprenda a criar repositórios, realizar commits e gerenciar versões de projetos com Git e GitHub, garantindo controle e histórico do código.",
     "status": "Concluído",
@@ -72,7 +72,7 @@
   "curso8": {
     "nome": "Git e GitHub: Controle e compartilhe seu código",
     "instituicao": "Alura",
-    "imagem": "assets/certificates/githubcontroleversao.png",
+    "imagem": "/assets/certificates/githubcontroleversao.png",
     "link": "https://cursos.alura.com.br/certificate/udiel-inacio/git-github-controle-de-versao",
     "descricao": "Domine o controle de versão e aprenda a compartilhar projetos no GitHub, colaborando de forma eficiente em equipes de desenvolvimento.",
     "status": "Concluído",
@@ -82,7 +82,7 @@
   "curso10": {
     "nome": "Formação Pratique HTML e CSS",
     "instituicao": "Alura",
-    "imagem": "assets/certificates/FormacaoFrontEnd.png",
+    "imagem": "/assets/certificates/FormacaoFrontEnd.png",
     "link": "https://cursos.alura.com.br/user/udiel-inacio/degree-html-css-v534235-534235/certificate",
     "descricao": "Formação prática para consolidar conhecimentos em HTML e CSS através de projetos reais, desenvolvendo páginas modernas e responsivas.",
     "status": "Concluído",
@@ -92,7 +92,7 @@
   "curso11": {
     "nome": "CCNAv7: Introdução às Redes",
     "instituicao": "Cisco",
-    "imagem": "assets/certificates/IntroducaoRedes.png",
+    "imagem": "/assets/certificates/IntroducaoRedes.png",
     "link": "assets/certificates/CertPdf/Cisco/Introducao_Redes.pdf",
     "descricao": "Curso introdutório sobre redes de computadores, cobrindo conceitos de conectividade, protocolos e configuração básica de dispositivos.",
     "status": "Concluído",
@@ -102,7 +102,7 @@
   "curso12": {
     "nome": "Endpoint Security",
     "instituicao": "Cisco",
-    "imagem": "assets/certificates/EndpointSecurity.png",
+    "imagem": "/assets/certificates/EndpointSecurity.png",
     "link": "assets/certificates/CertPdf/Cisco/Endpoint_Security.pdf",
     "descricao": "Aprenda práticas essenciais de segurança para proteger dispositivos e dados contra ameaças digitais, com foco em endpoints corporativos.",
     "status": "Concluído",
@@ -112,7 +112,7 @@
   "curso13": {
     "nome": "Networking Essentials",
     "instituicao": "Cisco",
-    "imagem": "assets/certificates/NetworkingEssentials.png",
+    "imagem": "/assets/certificates/NetworkingEssentials.png",
     "link": "assets/certificates/CertPdf/Cisco/Networking_Essentials.pdf",
     "descricao": "Fundamentos essenciais de redes, incluindo protocolos, endereçamento IP e configuração básica de equipamentos de rede.",
     "status": "Concluído",
@@ -122,7 +122,7 @@
   "curso14": {
     "nome": "Processo Criativo e Ideação",
     "instituicao": "iTalents",
-    "imagem": "assets/certificates/ProcessoEIdeacao.png",
+    "imagem": "/assets/certificates/ProcessoEIdeacao.png",
     "link": "assets/certificates/CertPdf/Italents/Processo_Criativo_Ideacao.pdf",
     "descricao": "Curso voltado para estimular criatividade e ideação de soluções inovadoras, aplicando técnicas de brainstorming e design thinking.",
     "status": "Concluído",
@@ -132,7 +132,7 @@
   "curso15": {
     "nome": "Fundamentos de UX",
     "instituicao": "iTalents",
-    "imagem": "assets/certificates/FundamentosDeUX.png",
+    "imagem": "/assets/certificates/FundamentosDeUX.png",
     "link": "assets/certificates/CertPdf/Italents/Fundamentos_UX.pdf",
     "descricao": "Introdução aos princípios de experiência do usuário e design centrado em pessoas, com foco em usabilidade e acessibilidade.",
     "status": "Concluído",
@@ -142,7 +142,7 @@
   "curso16": {
     "nome": "Core Skills",
     "instituicao": "iTalents",
-    "imagem": "assets/certificates/CoreSkills.png",
+    "imagem": "/assets/certificates/CoreSkills.png",
     "link": "assets/certificates/CertPdf/Italents/Core_Skills.pdf",
     "descricao": "Desenvolvimento de habilidades essenciais para o mercado de trabalho moderno, como comunicação, colaboração e resolução de problemas.",
     "status": "Concluído",
@@ -152,7 +152,7 @@
   "curso17": {
     "nome": "Get Connected",
     "instituicao": "Cisco",
-    "imagem": "assets/certificates/GetConected.png",
+    "imagem": "/assets/certificates/GetConected.png",
     "link": "https://www.netacad.com/courses/get-connected",
     "descricao": "Curso introdutório da Cisco sobre fundamentos de tecnologia e conectividade digital, abordando conceitos básicos de hardware, software e redes para iniciantes.",
     "status": "Concluído",
@@ -162,7 +162,7 @@
   "curso18": {
     "nome": "ARD - Certificado",
     "instituicao": "iTalents",
-    "imagem": "assets/certificates/ARD.png",
+    "imagem": "/assets/certificates/ARD.png",
     "link": "#",
     "descricao": "Certificação ARD concluída, comprovando participação e aproveitamento em programa de desenvolvimento profissional voltado para inovação e habilidades digitais.",
     "status": "Concluído",
