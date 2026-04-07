@@ -86,14 +86,14 @@
 .projectIcon {
   width: 60px;
   height: 60px;
-  border-radius: 50%;
   overflow: hidden;
+  padding: 0.2rem;
 }
 
 .projectIcon img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .projectDescription {
@@ -200,4 +200,15 @@
   justify-content: space-between;
 }
 
+}
+.fallback{
+  background: var(--color-dark);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  border-radius: 15px;
 }

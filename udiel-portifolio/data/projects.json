@@ -4,17 +4,23 @@
       "id": 1,
       "category": "Landing Page",
       "title": "Portfólio Pessoal",
-      "iconProject": "https://cdn-icons-png.flaticon.com/512/5968/5968322.png",
+      "iconProject": "assets/u.svg",
       "description": "Um portfólio pessoal desenvolvido com Next.js, Tailwind CSS e GSAP para mostrar minhas habilidades e projetos. O design é moderno e responsivo, com animações suaves para uma experiência de usuário envolvente.",
       "image": "/assets/portfolio.png",
       "link": "https://udielportifolio.vercel.app",
       "github": "https://github.com/Udiel-Oliveira/UdielOliveiraPortifolio",
-      "tecnologias": ["nextjs","react" ,"tailwindcss", "gsap", "typescript"],
+      "tecnologias": [
+        "nextjs",
+        "react",
+        "tailwindcss",
+        "gsap",
+        "typescript"
+      ],
       "video": "https://www.youtube.com/watch?v=4WvT7pQXc5c",
       "Imagens": [
-"/assets/ecommerce1.png",
-        "/assets/ecommerce2.png",
-        "/assets/ecommerce3.png"
+        "/imageOg.png",
+        "https://static.corinthians.com.br/uploads/PKszXckr/1681915607f02793d3bedd53b7bc552929c52be8d0.jpg",
+        "https://static.corinthians.com.br/uploads/PKszXckr/1681915607f02793d3bedd53b7bc552929c52be8d0.jpg"
       ]
     },
     {
@@ -26,12 +32,15 @@
       "image": "/assets/ecommerce.png",
       "link": "https://loja-virtual-demo.vercel.app",
       "github": "https://github.com/seu-usuario/ecommerce",
-      "tecnologias": ["react", "nodejs"],
+      "tecnologias": [
+        "react",
+        "nodejs"
+      ],
       "video": "https://www.youtube.com/watch?v=4WvT7pQXc5c",
       "Imagens": [
-        "/assets/ecommerce1.png",
-        "/assets/ecommerce2.png",
-        "/assets/ecommerce3.png"
+        "https://static.corinthians.com.br/uploads/PKszXckr/1681915607f02793d3bedd53b7bc552929c52be8d0.jpg",
+        "https://static.corinthians.com.br/uploads/PKszXckr/1681915607f02793d3bedd53b7bc552929c52be8d0.jpg",
+        "https://static.corinthians.com.br/uploads/PKszXckr/1681915607f02793d3bedd53b7bc552929c52be8d0.jpg"
       ]
     },
     {
@@ -43,12 +52,16 @@
       "image": "/assets/financas.png",
       "link": "https://financas-app-demo.vercel.app",
       "github": "https://github.com/seu-usuario/financas-app",
-      "tecnologias": ["nextjs", "firebase", "chartjs"],
+      "tecnologias": [
+        "nextjs",
+        "firebase",
+        "chartjs"
+      ],
       "video": "https://www.youtube.com/watch?v=5t9zR7XQwzY",
       "Imagens": [
-        "/assets/financas1.png",
-        "/assets/financas2.png",
-        "/assets/financas3.png"
+        "https://static.corinthians.com.br/uploads/PKszXckr/1681915607f02793d3bedd53b7bc552929c52be8d0.jpg",
+        "https://static.corinthians.com.br/uploads/PKszXckr/1681915607f02793d3bedd53b7bc552929c52be8d0.jpg",
+        "https://static.corinthians.com.br/uploads/PKszXckr/1681915607f02793d3bedd53b7bc552929c52be8d0.jpg"
       ]
     }
   ]

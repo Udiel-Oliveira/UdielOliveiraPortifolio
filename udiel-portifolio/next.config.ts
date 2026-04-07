@@ -7,7 +7,8 @@ const nextConfig: NextConfig = {
       "tse1.mm.bing.net",
       "portal.redevix.com",
       "agoranovale.com.br",
-      "cdn-icons-png.flaticon.com"
+      "cdn-icons-png.flaticon.com",
+      "static.corinthians.com.br",
     ],
   },
 };
