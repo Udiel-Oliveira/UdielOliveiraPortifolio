@@ -1,8 +1,6 @@
 <div align="center">
 
-<img src="udiel-portifolio/public/assets/U.svg" width="60px" alt="Logo Udiel" />
-
-# Udiel Oliveira
+<img src="udiel-portifolio/public/assets/udiellogo.svg" width="40%" alt="Logo Udiel" />
 
 ### Desenvolvedor Front End
 
@@ -33,7 +31,7 @@ Principalmente para **recrutadores e empresas** que desejam conhecer meu perfil 
 ## 📌 O que você vai encontrar no site
 
 ### Hero
-Uma visão rápida da minha trajetória, foco profissional e stack de tecnologias — o essencial para entender com quem você está falando.
+Uma visão rápida da minha trajetória, meu foco em desenvolvimento front-end e as tecnologias que impulsionam meus projetos.
 
 <img width="1897" height="972" alt="image" src="https://github.com/user-attachments/assets/a72f5953-7398-432e-a0aa-d549d8c5bf16" />
 
@@ -57,19 +55,19 @@ Acesso direto ao meu LinkedIn e download do currículo atualizado em PDF — sem
 <img width="1911" height="968" alt="image" src="https://github.com/user-attachments/assets/800af214-a80c-4ce0-8504-375e69c870e8" />
 
 ---
-
 ## 🛠️ Tecnologias utilizadas
 
-| Camada | Tecnologia |
-|---|---|
-| Framework | Next.js 16 + React 19 |
-| Linguagem | TypeScript |
-| Estilização | Tailwind CSS v4 + CSS Modules |
-| Animações | GSAP 3 (SplitText) |
-| Componentes | Swiper, Akar Icons |
-| Deploy & Analytics | Vercel |
+[![My Skills](https://skillicons.dev/icons?i=nextjs,react,typescript,tailwind,css,vercel&perline=10)](https://skillicons.dev)
 
----
+| Camada              | Tecnologia                  |
+|---------------------|-----------------------------|
+| Framework           | Next.js 16 + React 19       |
+| Linguagem           | TypeScript                  |
+| Estilização         | Tailwind CSS v4 + CSS Modules |
+| Animações           | GSAP 3 (SplitText)          |
+| Componentes         | Swiper, Akar Icons          |
+| Deploy & Analytics  | Vercel                      |
+
 
 ## ✅ Diferenciais
 
@@ -82,19 +80,6 @@ Acesso direto ao meu LinkedIn e download do currículo atualizado em PDF — sem
 **Performance e SEO** — metadados completos, Open Graph configurado e monitoramento de performance via Vercel Speed Insights.
 
 **Código limpo e componentizado** — arquitetura modular com separação clara entre layout, seções e componentes de UI reutilizáveis.
-
----
-
-## 🚀 Rodando localmente
-
-```bash
-git clone https://github.com/Udiel-Oliveira/UdielOliveiraPortifolio.git
-cd UdielOliveiraPortifolio/udiel-portifolio
-npm install
-npm run dev
-```
-
-Acesse [http://localhost:3000](http://localhost:3000).
 
 ---
 
