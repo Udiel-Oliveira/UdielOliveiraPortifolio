@@ -11,19 +11,43 @@ export default function ProjectCard() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
 
+  const getVideoSrc = (url: string) => {
+    if (url.includes('youtube.com') || url.includes('youtu.be')) {
+      return url.replace('watch?v=', 'embed/');
+    }
+    return url;
+  };
+
+  const renderVideo = (project: any) => {
+    if (project.video.startsWith('/')) {
+      return (
+        <video
+          src={project.video}
+          title={project.title}
+          className={Styles.iframe}
+          controls
+        ></video>
+      );
+    } else {
+      return (
+        <iframe
+          src={getVideoSrc(project.video)}
+          title={project.title}
+          className={Styles.iframe}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      );
+    }
+  };
+
   return (
     <div className={Styles.section}>
       {projectData.projects.map((project) => (
         <div key={project.id} className={Styles.projectCard}>
           <div className={Styles.grid}>
             <div className={Styles.video}>
-              <iframe
-                src={project.video.replace("watch?v=", "embed/")}
-                title={project.title}
-                className={Styles.iframe}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+              {renderVideo(project)}
             </div>
 
             <div className={Styles.images}>
@@ -34,10 +58,11 @@ export default function ProjectCard() {
                   <div key={index} className={Styles.imgContainer}>
                     {!error ? (
                       <Image
-                        width={100}
-                        height={100}
+                        width={1000}
+                        height={1000}
                         src={image}
                         alt={`${project.title} screenshot ${index + 1}`}
+                        className="cursor-pointer"
                         onClick={() => {
                           setSelectedImage(image);
                           setIsModalOpen(true);
