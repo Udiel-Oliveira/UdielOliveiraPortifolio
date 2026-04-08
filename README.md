@@ -1,6 +1,7 @@
 <div align="center">
 
-<img src="udiel-portifolio/public/assets/udiellogo.svg" width="40%" alt="Logo Udiel" />
+
+<img width="40%" alt="image" src="https://udielportifolio.vercel.app/assets/LogoCarregamento.gif" />
 
 ### Desenvolvedor Front End
 
