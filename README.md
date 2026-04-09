@@ -49,6 +49,7 @@ Cursos e certificações que complementam minha formação técnica, organizados
 ### Projetos
 Projetos reais com descrição, tecnologias utilizadas e links diretos para o repositório e a versão ao vivo. Cada card foi pensado para mostrar contexto e resultado, não apenas código.
 
+<img width="1903" height="967" alt="image" src="https://github.com/user-attachments/assets/71a20bf7-5811-453f-bb7d-b79f90e80efc" />
 
 ### Contato
 Acesso direto ao meu LinkedIn e download do currículo atualizado em PDF — sem fricção para quem quer dar o próximo passo.
