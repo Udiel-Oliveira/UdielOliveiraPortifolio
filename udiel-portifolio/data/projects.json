@@ -18,9 +18,9 @@
       ],
       "video": "https://www.youtube.com/watch?v=3RXUyhMomso",
       "Imagens": [
+        "/assets/ProjectsImages/HeroSectionAmbar.png",
         "/assets/ProjectsImages/EcossistemaSectionAmbar.png",
-        "/assets/ProjectsImages/FeatureSectionAmbar.png",
-        "/assets/ProjectsImages/HeroSectionAmbar.png"
+        "/assets/ProjectsImages/FeatureSectionAmbar.png"
       ]
     },
     {
@@ -30,8 +30,8 @@
       "iconProject": "/assets/ProjectsImages/LogoSmart.svg",
       "description": "uma aplicação web para monitoramento e controle de um terrário inteligente, desenvolvido com React, Node.js. Permite visualizar dados em tempo real, configurar alertas e controlar dispositivos conectados ao terrário. ainda em fase de desenvolvimento, mas já apresenta funcionalidades básicas de monitoramento e alertas.",
       "image": "/assets/ecommerce.png",
-      "link": "https://loja-virtual-demo.vercel.app",
-      "github": "https://github.com/seu-usuario/ecommerce",
+      "link": "https://smart-terrarium.vercel.app/",
+      "github": "https://github.com/Udiel-Oliveira/smart_terrarium/tree/master",
       "tecnologias": [
         "javascript",
         "nodejs",

@@ -156,8 +156,7 @@
 }
 
 .fullImage {
-  width: 100%; 
-  height: auto;
+
   border-radius: 0.5rem;
   animation: fadeIn 0.5s ease-in-out;
 }
@@ -223,6 +222,7 @@
 
 .detailsInfo {
   display: flex;
+  gap: 1rem;
   justify-content: space-between;
 }
 

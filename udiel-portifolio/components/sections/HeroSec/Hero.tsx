@@ -47,16 +47,15 @@ export default function Hero() {
         <br /> Front End
       </h1>
       <div className={Style.buttonContainer}>
-        <Button
-          href="https://www.linkedin.com/in/udiel-oliveira"
-          icon={<Phone />}
-          variant="primary"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Button href="#footer" icon={<Phone />} variant="primary">
           Entre em contato
         </Button>
-        <Button href="#about" download={'assets/Dowload/Curriculo_Udiel_Oliveira.pdf'} icon={<Download />} variant="secondary">
+        <Button
+          href="Download/Curriculo_Udiel_Oliveira.pdf"
+          download="Download/Curriculo_Udiel_Oliveira.pdf"
+          icon={<Download />}
+          variant="secondary"
+        >
           Baixar CV
         </Button>
       </div>

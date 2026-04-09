@@ -56,7 +56,7 @@ export default function Footer() {
     };
   }, []);
   return (
-    <footer className={Styles.footer}>
+    <footer className={Styles.footer} id="footer">
       <div className={Styles.footerContainer}>
         <img
           src="/assets/udiellogo.svg"
