@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button/Button";
 
 export default function Projects() {
   return (
-    <section id="Projects" className={Styles.section}>
+    <section id="projects" className={Styles.section}>
       <Button icon={<Trophy />} variant="title">
         Projetos
       </Button>

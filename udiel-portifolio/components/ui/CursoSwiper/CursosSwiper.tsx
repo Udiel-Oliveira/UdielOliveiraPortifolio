@@ -166,8 +166,8 @@ export default function CursoSwiper() {
                   </div>
                 </div>
                 <div className={Styles.detailsActions}>
-                  <Button icon={<Cross />} onClick={()=>{setIsInfoOpen(false);}} className={Styles.closeButtonDetailInfo}>Fechar</Button>
-                  <Button href={selectedCursoInfo.link} icon={<ArrowUpRight />} target="_blank">Link Certificado</Button>
+                  <Button icon={<Cross />} onClick={()=>{setIsInfoOpen(false);}} className={Styles.closeButtonDetailInfo} variant="secondary">Fechar</Button>
+                  <Button href={selectedCursoInfo.link} icon={<ArrowUpRight />} target="_blank" variant="secondary">Link Certificado</Button>
                 </div>
               </div>
             )}

@@ -51,8 +51,8 @@ export default function Hero() {
           Entre em contato
         </Button>
         <Button
-          href="Download/Curriculo_Udiel_Oliveira.pdf"
-          download="Download/Curriculo_Udiel_Oliveira.pdf"
+          href="Download/Curriculo_UdielOliveira.pdf"
+          download="Download/Curriculo_UdielOliveira.pdf"
           icon={<Download />}
           variant="secondary"
         >

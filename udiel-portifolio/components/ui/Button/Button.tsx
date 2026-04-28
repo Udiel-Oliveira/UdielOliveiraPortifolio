@@ -31,13 +31,13 @@ export default function Button({
 
   const variants: Record<ButtonVariant, string> = {
     primary:
-      "bg-[var(--color-white)] text-[var(--color-dark)] hover:bg-[var(--color-gray-light)] hover:text-[var(--color-dark)]",
+      "bg-[var(--color-dark)] text-[var(--color-white)] hover:bg-[var(--color-gray-light)] hover:text-[var(--color-dark)]",
     secondary:
-      "bg-[var(--color-dark)] text-white hover:bg-[var(--color-gray-light)] hover:text-[var(--color-dark)]",
+      "bg-[var(--color-white)] text-[var(--color-dark)] hover:bg-[var(--color-gray-light)] hover:text-[var(--color-dark)]",
     outline:
       "border border-[var(--color-dark)] text-[var(--color-dark)] hover:bg-[var(--color-gray-light)]",
     title:
-      "bg-[var(--color-white)] text-[var(--color-dark)] text-2xl font-bold hover:text-[var(--color-dark)]",
+      "bg-[var(--color-white)] text-[var(--color-dark)] text-2xl font-bold hover:text-[var(--color-dark)]"
   };
 
   return (

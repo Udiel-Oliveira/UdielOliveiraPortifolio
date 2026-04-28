@@ -17,6 +17,7 @@
 }
 
 @theme inline {
+  --color-linear-black: linear-gradient(90deg, var(--color-dark) 0%, var(--color-dark) 100%);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
@@ -31,8 +32,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
+    --color-dark: #E8E8E8;
+    --color-white: #ffffff;
+    --color-gray-light: rgb(34, 34, 34);
   }
 }
 

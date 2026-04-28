@@ -6,7 +6,10 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: var(--color-white);
+  background: var(--color-foreground);
+}
+.logoImg{
+  color: white;
 }
 .footerContainer {
   width: 100%;
@@ -18,8 +21,8 @@
   padding: 2rem 1rem;
   background: linear-gradient(
     to right,
-    var(--color-dark),
-    var(--color-background)
+    var(--color-white),
+    var(--color-white)
   );
   gap: 2rem;
   border-radius: 1.5rem;
@@ -27,7 +30,7 @@
 .footerContainer h1 {
   font-size: 4rem;
   font-weight: bold;
-  color: var(--color-white);
+  color: var(--color-dark);
   margin-bottom: 1rem;
   line-height: 4rem;
   text-align: center;

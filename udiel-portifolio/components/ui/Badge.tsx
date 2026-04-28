@@ -15,8 +15,8 @@ export default function Badge({ id, variant = "primary" }: BadgeProps) {
   }
 
   const variants: Record<BadgeVariants, string> = {
-    primary: "bg-[var(--color-dark)] text-white",
-    secondary: "bg-[var(--color-white)] text-[var(--color-dark)]",
+    primary: "bg-[var(--color-white)] text-[var(--color-dark)]",
+    secondary: "bg-[var(--color-dark)] text-[var(--color-white)]",
   };
 
   return (

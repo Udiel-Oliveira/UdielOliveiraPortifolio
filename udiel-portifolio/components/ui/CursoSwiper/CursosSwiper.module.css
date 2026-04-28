@@ -52,6 +52,7 @@
   background: linear-gradient(to top, black, transparent);
   padding: 1rem;
   z-index: 1;
+  border-radius: 0.5rem;
 }
 
 .enlargeButton {
@@ -156,7 +157,6 @@
 }
 
 .fullImage {
-
   border-radius: 0.5rem;
   animation: fadeIn 0.5s ease-in-out;
 }
@@ -199,7 +199,7 @@
 .modalInfoContent {
   display: flex;
   flex-direction: column;
-  background-color: var(--color-dark);
+  background-color: var(--color-background);
   width: auto;
   gap: 2rem;
   border-radius: 1rem;
@@ -212,12 +212,14 @@
 }
 
 .modalTitle {
-  color: var(--color-white);
+  color: var(--color-dark);
   font-size: 2rem;
+  font-weight: bold;
 }
 
 .modalDescription {
   font-size: 1.2rem;
+  color: var(--color-dark);
 }
 
 .detailsInfo {
@@ -245,7 +247,7 @@
   width: 100%;
   padding: 0.5rem;
   border-radius: 999px;
-  background-color: var(--color-dark);
+  background-color: var(--color-background);
 }
 
 .detailButton {

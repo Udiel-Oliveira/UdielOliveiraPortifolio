@@ -105,7 +105,7 @@ export default function ProjectCard() {
               <h3>Tecnologias</h3>
               <div className={Styles.badges}>
                 {project.tecnologias.map((techId) => (
-                  <Badge key={techId} id={techId as keyof typeof badges} />
+                  <Badge key={techId} variant="secondary" id={techId as keyof typeof badges} />
                 ))}
               </div>
             </div>

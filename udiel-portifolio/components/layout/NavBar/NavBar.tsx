@@ -42,7 +42,7 @@ export default function NavBar() {
 
     const handleScroll = () => {
       if (window.scrollY > lastScrollY.current) {
-        setHidden(true); 
+        setHidden(true);
       } else {
         setHidden(false);
       }
@@ -58,7 +58,7 @@ export default function NavBar() {
   }, []);
 
   const navButtonVariant = (id: string) =>
-    id === activeSection ? "secondary" : "primary";
+    id === activeSection ? "primary" : "secondary";
 
   const navButtonClass = (id: string) =>
     id === activeSection
@@ -75,7 +75,7 @@ export default function NavBar() {
         <Button
           href="https://github.com/Udiel-Oliveira"
           icon={<GithubFill />}
-          variant="secondary"
+          variant="primary"
           target="_blank"
           rel="noopener noreferrer"
         />
@@ -84,7 +84,7 @@ export default function NavBar() {
           icon={<LinkedinBoxFill />}
           target="_blank"
           rel="noopener noreferrer"
-          variant="secondary"
+          variant="primary"
         />
       </div>
 
@@ -116,7 +116,7 @@ export default function NavBar() {
           Certificações
         </Button>
         <Button
-          href="#Projects"
+          href="#projects"
           icon={<Coffee />}
           variant={navButtonVariant("projects")}
           className={navButtonClass("projects")}
@@ -132,71 +132,55 @@ export default function NavBar() {
           viewBox="0 0 125 35"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M0 0H26.6902V15.646H0V0Z" fill="currentColor" />
-          <path
-            d="M0 19.3274H26.6902V20.7079C26.6902 28.0782 20.7154 34.053 13.3451 34.053C5.97481 34.053 0 28.0782 0 20.7079V19.3274Z"
-            fill="currentColor"
-          />
-          <path
-            d="M30.3716 15.646L30.3716 7.62939e-06L41.4158 7.14664e-06C50.0569 6.76892e-06 57.0618 7.00495 57.0618 15.646L30.3716 15.646Z"
-            fill="currentColor"
-          />
-          <path
-            d="M30.3716 34.053L30.3716 19.3273L57.0618 19.3273C57.0618 27.4601 50.4689 34.053 42.3362 34.053L30.3716 34.053Z"
-            fill="currentColor"
-          />
-          <rect
-            x="60.7432"
-            y="15.646"
-            width="15.646"
-            height="12.8849"
-            transform="rotate(-90 60.7432 15.646)"
-            fill="currentColor"
-          />
-          <rect
-            x="60.7432"
-            y="34.053"
-            width="14.7256"
-            height="12.8849"
-            transform="rotate(-90 60.7432 34.053)"
-            fill="currentColor"
-          />
-          <rect
-            x="105.897"
-            y="21.1794"
-            width="21.1793"
-            height="12.8737"
-            transform="rotate(-90 105.897 21.1794)"
-            fill="currentColor"
-          />
-          <rect
-            x="105.897"
-            y="34.0532"
-            width="9.55146"
-            height="19.1029"
-            transform="rotate(-90 105.897 34.0532)"
-            fill="currentColor"
-          />
-          <rect
-            x="77.3096"
-            width="24.8495"
-            height="10.1239"
-            fill="currentColor"
-          />
-          <rect
-            x="77.3096"
-            y="13.8054"
-            width="18.407"
-            height="7.36282"
-            fill="currentColor"
-          />
-          <rect
-            x="77.3096"
-            y="24.8494"
-            width="24.8495"
-            height="9.20352"
-            fill="currentColor"
-          />
+          <defs>
+            <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow
+                dx="2"
+                dy="2"
+                stdDeviation="2"
+                floodColor="black"
+                floodOpacity="0.4"
+              />
+            </filter>
+          </defs>
+
+          <g filter="url(#shadow)" fill="currentColor">
+            <path d="M0 0H26.6902V15.646H0V0Z" />
+            <path d="M0 19.3274H26.6902V20.7079C26.6902 28.0782 20.7154 34.053 13.3451 34.053C5.97481 34.053 0 28.0782 0 20.7079V19.3274Z" />
+            <path d="M30.3716 15.646L30.3716 7.62939e-06L41.4158 7.14664e-06C50.0569 6.76892e-06 57.0618 7.00495 57.0618 15.646L30.3716 15.646Z" />
+            <path d="M30.3716 34.053L30.3716 19.3273L57.0618 19.3273C57.0618 27.4601 50.4689 34.053 42.3362 34.053L30.3716 34.053Z" />
+            <rect
+              x="60.7432"
+              y="15.646"
+              width="15.646"
+              height="12.8849"
+              transform="rotate(-90 60.7432 15.646)"
+            />
+            <rect
+              x="60.7432"
+              y="34.053"
+              width="14.7256"
+              height="12.8849"
+              transform="rotate(-90 60.7432 34.053)"
+            />
+            <rect
+              x="105.897"
+              y="21.1794"
+              width="21.1793"
+              height="12.8737"
+              transform="rotate(-90 105.897 21.1794)"
+            />
+            <rect
+              x="105.897"
+              y="34.0532"
+              width="9.55146"
+              height="19.1029"
+              transform="rotate(-90 105.897 34.0532)"
+            />
+            <rect x="77.3096" width="24.8495" height="10.1239" />
+            <rect x="77.3096" y="13.8054" width="18.407" height="7.36282" />
+            <rect x="77.3096" y="24.8494" width="24.8495" height="9.20352" />
+          </g>
         </svg>
       </div>
     </nav>

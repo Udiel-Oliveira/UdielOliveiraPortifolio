@@ -32,7 +32,7 @@
     radial-gradient(
       129% 99% at 112% 85%,
       var(--color-blue-light) 20%,
-      var(--color-white) 90%
+      var(--color-foreground) 90%
     ),
     url("https://assets.codepen.io/16327/noise-e82662fe.png");
   background-blend-mode: color-dodge;
