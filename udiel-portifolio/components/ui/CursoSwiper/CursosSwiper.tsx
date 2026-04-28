@@ -96,16 +96,14 @@ export default function CursoSwiper() {
         ))}
         <div className={Styles.navButtons}>
           <Button
-            className="custom-prev"
+            className="custom-prev cursor-pointer"
             variant="primary"
             icon={<ChevronLeft />}
-            className="cursor-pointer"
           ></Button>
           <Button
-            className="custom-next"
+            className="custom-next cursor-pointer"
             variant="primary"
             icon={<ChevronRight />}
-            className="cursor-pointer"
           ></Button>
         </div>
       </Swiper>
