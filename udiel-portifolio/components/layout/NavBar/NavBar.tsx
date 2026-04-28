@@ -35,7 +35,7 @@ export default function NavBar() {
           }
         });
       },
-      { threshold: 0.6 },
+      { rootMargin: "-35% 0px -35% 0px", threshold: 0 },
     );
 
     sections.forEach((section) => observer.observe(section));
