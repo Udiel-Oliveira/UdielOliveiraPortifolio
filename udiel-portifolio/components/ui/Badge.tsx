@@ -21,17 +21,17 @@ export default function Badge({ id, variant = "primary" }: BadgeProps) {
 
   return (
     <span
-      className={` ${variants[variant]} w-auto inline-flex items-center justify-center px-4 py-4 gap-2 rounded-full font-medium transition-colors uppercase text-x`}
+      className={` ${variants[variant]} inline-flex items-center justify-center px-4 py-4 gap-2 rounded-full font-medium transition-colors uppercase text-x`}
     >
       <Image
-        width={5}
-        height={5}
+        width={20}
+        height={20}
         src={`assets/tech-Icons/${badge.icon}`}
         alt={badge.name}
-        className="w-5"
+
       />
 
-      <h2 className="inline-flex">{badge.name}</h2>
+      <h2 >{badge.name}</h2>
     </span>
   );
 }
