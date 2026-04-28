@@ -33,16 +33,15 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #000000;
-    --foreground: #ededed;
-    --color-dark: #E8E8E8;
-    --color-white: #ffffff;
+    --foreground: #ffffff;
+    --color-white: #1F1F1F;
+    --color-dark: #ffffff;
     --color-gray-light: rgb(34, 34, 34);
   }
 }
 
 body {
-  background: transparent;
-  color: var(--foreground);
+  background: var(--background);
   font-family: "Jaldi", Helvetica, sans-serif;
   scrollbar-gutter: stable overlay;
 }
