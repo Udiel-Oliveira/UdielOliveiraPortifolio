@@ -8,7 +8,16 @@ import "swiper/css/pagination";
 
 import Styles from "./CursosSwiper.module.css";
 import Button from "../Button/Button";
-import { ArrowUpRight, Calendar, Cross, Diamond, Enlarge, Info } from "akar-icons";
+import {
+  ArrowUpRight,
+  Calendar,
+  ChevronLeft,
+  ChevronRight,
+  Cross,
+  Diamond,
+  Enlarge,
+  Info,
+} from "akar-icons";
 
 // Importa o JSON
 import cursosObj from "@/data/courses.json";
@@ -24,7 +33,9 @@ export default function CursoSwiper() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
   const [isInfoOpen, setIsInfoOpen] = useState(false);
-  const [selectedCursoInfo, setSelectedCursoInfo] = useState<typeof cursosDestaque[0] | null>(null);
+  const [selectedCursoInfo, setSelectedCursoInfo] = useState<
+    (typeof cursosDestaque)[0] | null
+  >(null);
 
   return (
     <div className={Styles.cursoSwiperContainer}>
@@ -33,7 +44,24 @@ export default function CursoSwiper() {
         slidesPerView={"auto"}
         centeredSlides={true}
         spaceBetween={30}
-        navigation={true}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 15,
+          },
+          640: {
+            slidesPerView: 1.1,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: "auto",
+            spaceBetween: 30,
+          },
+        }}
+        navigation={{
+          nextEl: ".custom-next",
+          prevEl: ".custom-prev",
+        }}
         pagination={{ clickable: true }}
         modules={[Autoplay, Navigation, Pagination]}
         loop={true}
@@ -46,7 +74,13 @@ export default function CursoSwiper() {
       >
         {cursosDestaque.map((curso, i) => (
           <SwiperSlide key={i} className={Styles.swiperSlide}>
-            <Image width={500} height={500} src={curso.imagem} alt={curso.nome} className={Styles.image} />
+            <Image
+              width={500}
+              height={500}
+              src={curso.imagem}
+              alt={curso.nome}
+              className={Styles.image}
+            />
             <div className={Styles.action}>
               <Button
                 icon={<Enlarge />}
@@ -60,6 +94,20 @@ export default function CursoSwiper() {
             </div>
           </SwiperSlide>
         ))}
+        <div className={Styles.navButtons}>
+          <Button
+            className="custom-prev"
+            variant="primary"
+            icon={<ChevronLeft />}
+            className="cursor-pointer"
+          ></Button>
+          <Button
+            className="custom-next"
+            variant="primary"
+            icon={<ChevronRight />}
+            className="cursor-pointer"
+          ></Button>
+        </div>
       </Swiper>
 
       {/* Swiper dos restantes */}
@@ -68,6 +116,28 @@ export default function CursoSwiper() {
           slidesPerView={5}
           centeredSlides={true}
           spaceBetween={30}
+          breakpoints={{
+            0: {
+              slidesPerView: 1.1,
+              spaceBetween: 16,
+            },
+            500: {
+              slidesPerView: 2,
+              spaceBetween: 18,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 22,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 24,
+            },
+            1280: {
+              slidesPerView: 5,
+              spaceBetween: 30,
+            },
+          }}
           navigation={true}
           pagination={{ clickable: true }}
           loop={true}
@@ -82,8 +152,8 @@ export default function CursoSwiper() {
           {cursosRestantes.map((curso, i) => (
             <SwiperSlide key={i} className={Styles.slideRow}>
               <Image
-              width={1000}
-              height={100}
+                width={1000}
+                height={100}
                 src={curso.imagem}
                 alt={curso.nome}
                 className={Styles.image}
@@ -93,7 +163,6 @@ export default function CursoSwiper() {
                   setIsModalOpen(true);
                 }}
               />
-              
             </SwiperSlide>
           ))}
         </Swiper>
@@ -105,14 +174,18 @@ export default function CursoSwiper() {
           <div className={Styles.modal} onClick={(e) => e.stopPropagation()}>
             <div className={Styles.modalImage}>
               <Image
-              width={1000}
-              height={1000}
+                width={1000}
+                height={1000}
                 src={selectedImage}
                 alt="Full screen"
                 className={Styles.fullImage}
               />
               <div className={Styles.action}>
-                <Button icon={<Info />} onClick={() => setIsInfoOpen(true)} className={Styles.detailButton}>
+                <Button
+                  icon={<Info />}
+                  onClick={() => setIsInfoOpen(true)}
+                  className={Styles.detailButton}
+                >
                   Detalhes
                 </Button>
               </div>
@@ -166,8 +239,24 @@ export default function CursoSwiper() {
                   </div>
                 </div>
                 <div className={Styles.detailsActions}>
-                  <Button icon={<Cross />} onClick={()=>{setIsInfoOpen(false);}} className={Styles.closeButtonDetailInfo} variant="secondary">Fechar</Button>
-                  <Button href={selectedCursoInfo.link} icon={<ArrowUpRight />} target="_blank" variant="secondary">Link Certificado</Button>
+                  <Button
+                    icon={<Cross />}
+                    onClick={() => {
+                      setIsInfoOpen(false);
+                    }}
+                    className={Styles.closeButtonDetailInfo}
+                    variant="secondary"
+                  >
+                    Fechar
+                  </Button>
+                  <Button
+                    href={selectedCursoInfo.link}
+                    icon={<ArrowUpRight />}
+                    target="_blank"
+                    variant="secondary"
+                  >
+                    Link Certificado
+                  </Button>
                 </div>
               </div>
             )}
