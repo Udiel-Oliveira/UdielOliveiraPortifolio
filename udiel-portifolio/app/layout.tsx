@@ -16,6 +16,7 @@ const jaldi = Jaldi({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://udielportifolio.vercel.app"),
   title: "Udiel Oliveira | Dev",
   description:
     "Portfólio de Udiel Oliveira, desenvolvedor Front End com foco em React, Next.js e TypeScript. Conheça meus projetos, certificações e entre em contato.",
