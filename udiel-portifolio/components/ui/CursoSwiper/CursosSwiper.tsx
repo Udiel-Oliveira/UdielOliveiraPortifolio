@@ -90,6 +90,7 @@ export default function CursoSwiper() {
                   setIsModalOpen(true);
                 }}
                 className={Styles.enlargeButton}
+                ariaLabel="Ampliar imagem do certificado"
               ></Button>
             </div>
           </SwiperSlide>
@@ -99,11 +100,13 @@ export default function CursoSwiper() {
             className="custom-prev cursor-pointer"
             variant="primary"
             icon={<ChevronLeft />}
+            ariaLabel="Slide anterior"
           ></Button>
           <Button
             className="custom-next cursor-pointer"
             variant="primary"
             icon={<ChevronRight />}
+            ariaLabel="Próximo slide"
           ></Button>
         </div>
       </Swiper>
@@ -198,6 +201,7 @@ export default function CursoSwiper() {
               }}
               icon={<Cross />}
               variant="primary"
+              ariaLabel="Fechar"
             />
             {isInfoOpen && selectedCursoInfo && (
               <div

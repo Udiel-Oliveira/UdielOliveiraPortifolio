@@ -13,6 +13,7 @@ interface ButtonProps {
   rel?: string;
   className?: string;
   onClick?: () => void;
+  ariaLabel?: string;
 }
 
 export default function Button({
@@ -25,6 +26,7 @@ export default function Button({
   rel,
   className,
   onClick,
+  ariaLabel,
 }: ButtonProps) {
   const baseStyles =
     "inline-flex items-center justify-evenly px-4 gap-2 py-4 rounded-full font-medium transition-colors uppercase text-x";
@@ -47,6 +49,7 @@ export default function Button({
       target={target}
       rel={rel}
       onClick={onClick ? (e) => { e.preventDefault(); onClick(); } : undefined}
+      aria-label={ariaLabel}
       className={`${Styles.base} ${baseStyles} ${variants[variant]} ${className ?? ""}`.trim()}
     >
       {icon && <span className="text-lg">{icon}</span>}

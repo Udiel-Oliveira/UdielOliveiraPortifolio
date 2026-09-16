@@ -140,15 +140,17 @@ export default function ProjectCard() {
               >
                 Visitar Projeto
               </Button>
-              <Button
-                icon={<GithubFill />}
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="secondary"
-              >
-                Código Fonte
-              </Button>
+              {project.github && (
+                <Button
+                  icon={<GithubFill />}
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="secondary"
+                >
+                  Código Fonte
+                </Button>
+              )}
             </div>
           </div>
         </div>
@@ -169,6 +171,7 @@ export default function ProjectCard() {
               onClick={() => setIsModalOpen(false)}
               icon={<Cross />}
               variant="primary"
+              ariaLabel="Fechar imagem"
             />
           </div>
         </div>
