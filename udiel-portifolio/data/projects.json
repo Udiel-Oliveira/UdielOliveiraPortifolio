@@ -2,6 +2,30 @@
   "projects": [
     {
       "id": 1,
+      "category": "Site Institucional",
+      "title": "Legados Contabilidade",
+      "iconProject": "/assets/ProjectsImages/LogoLegados.png",
+      "description": "Desenvolvimento de site institucional completo com foco em UX, performance e SEO: CTAs estratégicos, formulário de contato com validação e blog para marketing de conteúdo. Configuração, deploy e gerenciamento do ambiente de produção na Hostinger, com melhorias de segurança e aplicação de boas práticas de SEO técnico.",
+      "image": "/assets/portfolio.png",
+      "link": "https://legadoscontabilidade.com.br/",
+      
+      "tecnologias": [
+        "nextjs",
+        "react",
+        "css",
+        "javascript",
+        "typescript",
+        "tailwindcss"
+      ],
+      "video": "https://www.youtube.com/watch?v=3RXUyhMomso",
+      "Imagens": [
+        "/assets/ProjectsImages/HomePageLegadosContabilidade.png",
+        "/assets/ProjectsImages/QuemSomosLegadosContabilidade.png",
+        "/assets/ProjectsImages/ContatoLegadosContabilidade.png"
+      ]
+    },
+    {
+      "id": 2,
       "category": "Landing Page",
       "title": "Projeto Ambar",
       "iconProject": "https://ambar-project.vercel.app/icon/logoAmbar.svg",
@@ -24,7 +48,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 3,
       "category": "Aplicativo Web",
       "title": "Smart Terrarium",
       "iconProject": "/assets/ProjectsImages/LogoSmart.svg",
