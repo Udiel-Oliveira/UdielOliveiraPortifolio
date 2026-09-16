@@ -7,6 +7,41 @@ import { ArrowUpRight, Cross, FaceSad, GithubFill } from "akar-icons";
 import { useState } from "react";
 import Image from "next/image";
 
+type Project = (typeof projectData.projects)[number];
+
+function ProjectImage({
+  src,
+  alt,
+  onClick,
+}: {
+  src: string;
+  alt: string;
+  onClick: () => void;
+}) {
+  const [error, setError] = useState(false);
+
+  if (error) {
+    return (
+      <div className={Styles.fallback}>
+        <FaceSad />
+        <span>Imagem Indisponível</span>
+      </div>
+    );
+  }
+
+  return (
+    <Image
+      width={1000}
+      height={1000}
+      src={src}
+      alt={alt}
+      className="cursor-pointer"
+      onClick={onClick}
+      onError={() => setError(true)}
+    />
+  );
+}
+
 export default function ProjectCard() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
@@ -18,7 +53,7 @@ export default function ProjectCard() {
     return url;
   };
 
-  const renderVideo = (project: any) => {
+  const renderVideo = (project: Project) => {
     if (project.video.startsWith('/')) {
       return (
         <video
@@ -51,33 +86,18 @@ export default function ProjectCard() {
             </div>
 
             <div className={Styles.images}>
-              {project.Imagens.map((image, index) => {
-                const [error, setError] = useState(false);
-
-                return (
-                  <div key={index} className={Styles.imgContainer}>
-                    {!error ? (
-                      <Image
-                        width={1000}
-                        height={1000}
-                        src={image}
-                        alt={`${project.title} screenshot ${index + 1}`}
-                        className="cursor-pointer"
-                        onClick={() => {
-                          setSelectedImage(image);
-                          setIsModalOpen(true);
-                        }}
-                        onError={() => setError(true)}
-                      />
-                    ) : (
-                      <div className={Styles.fallback}>
-                        <FaceSad/>
-                        <span>Imagem  Indisponível</span>
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
+              {project.Imagens.map((image, index) => (
+                <div key={index} className={Styles.imgContainer}>
+                  <ProjectImage
+                    src={image}
+                    alt={`${project.title} screenshot ${index + 1}`}
+                    onClick={() => {
+                      setSelectedImage(image);
+                      setIsModalOpen(true);
+                    }}
+                  />
+                </div>
+              ))}
             </div>
           </div>
 

@@ -18,7 +18,8 @@ export default function NavBar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(() => {
-    setIsNavOpen(true);
+    const frame = requestAnimationFrame(() => setIsNavOpen(true));
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   useEffect(() => {

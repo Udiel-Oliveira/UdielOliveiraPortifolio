@@ -58,10 +58,9 @@ section[id] {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background:var(--color-gray-offwhite);
-  
+  background: var(--color-offwhite);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-);
+  background: var(--color-gray-medium);
   border-radius: 4px;
 }

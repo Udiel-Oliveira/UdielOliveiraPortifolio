@@ -122,8 +122,15 @@ export default function Footer() {
           Incrivel Juntos
         </h1>
         <div className={Styles.contactInfo}>
-          <Button href={email} icon={<Mention />}>
-            Email
+          <Button
+            href={email}
+            icon={<Mention />}
+            onClick={() => {
+              copyEmail();
+              window.location.href = email;
+            }}
+          >
+            {emailCopied ? "Email copiado!" : "Email"}
           </Button>
           <Button
             href={whatsapp}
