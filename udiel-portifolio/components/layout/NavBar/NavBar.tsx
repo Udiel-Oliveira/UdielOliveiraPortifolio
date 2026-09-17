@@ -7,10 +7,12 @@ import { useEffect, useState, useRef } from "react";
 import { useLanguage } from "@/lib/i18n";
 import {
   Coffee,
+  Cross,
   File,
   GithubFill,
   Home,
   LinkedinBoxFill,
+  ThreeLineHorizontal,
   Trophy,
 } from "akar-icons";
 
@@ -20,11 +22,42 @@ export default function NavBar() {
   const [activeSection, setActiveSection] = useState("");
   const lastScrollY = useRef(0);
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const isMobileMenuOpenRef = useRef(false);
+  const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const frame = requestAnimationFrame(() => setIsNavOpen(true));
     return () => cancelAnimationFrame(frame);
   }, []);
+
+  useEffect(() => {
+    isMobileMenuOpenRef.current = isMobileMenuOpen;
+  }, [isMobileMenuOpen]);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+
+    document.body.style.overflow = "hidden";
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsMobileMenuOpen(false);
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = "";
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isMobileMenuOpen]);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
@@ -46,6 +79,7 @@ export default function NavBar() {
     sections.forEach((section) => observer.observe(section));
 
     const handleScroll = () => {
+      if (isMobileMenuOpenRef.current) return;
       if (window.scrollY > lastScrollY.current) {
         setHidden(true);
       } else {
@@ -72,6 +106,7 @@ export default function NavBar() {
 
   return (
     <nav
+      ref={navRef}
       className={`${Styles.navBar} transition-transform duration-300 ${
         hidden ? "-translate-y-full" : "translate-y-0"
       }`}
@@ -96,46 +131,65 @@ export default function NavBar() {
       </div>
 
       <div
-        className={`${Styles.navLinks} ${isNavOpen ? Styles.open : ""} ${isNavOpen ? Styles.animate : ""}`}
+        className={`${Styles.navLinks} ${isNavOpen ? Styles.open : ""} ${isMobileMenuOpen ? Styles.mobileOpen : ""}`}
       >
-        <Button
-          href="#hero"
-          icon={<Home />}
-          variant={navButtonVariant("hero")}
-          className={navButtonClass("hero")}
+        <div
+          className={Styles.mobileNavItems}
+          onClick={() => setIsMobileMenuOpen(false)}
         >
-          {t.nav.home}
-        </Button>
-        <Button
-          href="#about"
-          icon={<File />}
-          variant={navButtonVariant("about")}
-          className={navButtonClass("about")}
-        >
-          {t.nav.about}
-        </Button>
-        <Button
-          href="#certifications"
-          icon={<Trophy />}
-          variant={navButtonVariant("certifications")}
-          className={navButtonClass("certifications")}
-        >
-          {t.nav.certifications}
-        </Button>
-        <Button
-          href="#projects"
-          icon={<Coffee />}
-          variant={navButtonVariant("projects")}
-          className={navButtonClass("projects")}
-        >
-          {t.nav.projects}
-        </Button>
+          <Button
+            href="#hero"
+            icon={<Home />}
+            variant={navButtonVariant("hero")}
+            className={navButtonClass("hero")}
+          >
+            {t.nav.home}
+          </Button>
+          <Button
+            href="#about"
+            icon={<File />}
+            variant={navButtonVariant("about")}
+            className={navButtonClass("about")}
+          >
+            {t.nav.about}
+          </Button>
+          <Button
+            href="#certifications"
+            icon={<Trophy />}
+            variant={navButtonVariant("certifications")}
+            className={navButtonClass("certifications")}
+          >
+            {t.nav.certifications}
+          </Button>
+          <Button
+            href="#projects"
+            icon={<Coffee />}
+            variant={navButtonVariant("projects")}
+            className={navButtonClass("projects")}
+          >
+            {t.nav.projects}
+          </Button>
+        </div>
+        <div className={Styles.mobileBottomRow}>
+          <LanguageSwitcher variant="inline" />
+          <Logo className="text-[var(--color-dark)]" />
+        </div>
       </div>
 
       <div className={Styles.rightGroup}>
         <LanguageSwitcher />
         <Logo />
       </div>
+
+      <Button
+        className={Styles.hamburgerButton}
+        variant="primary"
+        onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+        ariaExpanded={isMobileMenuOpen}
+        ariaLabel={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+        icon={isMobileMenuOpen ? <Cross /> : <ThreeLineHorizontal />}
+      />
+      
     </nav>
   );
 }

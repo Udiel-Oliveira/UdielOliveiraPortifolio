@@ -12,7 +12,11 @@ const LANGUAGES: { code: Locale; label: string; flag: string }[] = [
   { code: "es", label: "Español", flag: "/assets/flags/es.svg" },
 ];
 
-export default function LanguageSwitcher() {
+type LanguageSwitcherProps = {
+  variant?: "dropdown" | "inline";
+};
+
+export default function LanguageSwitcher({ variant = "dropdown" }: LanguageSwitcherProps) {
   const { locale, setLocale } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -20,7 +24,7 @@ export default function LanguageSwitcher() {
   const current = LANGUAGES.find((lang) => lang.code === locale) ?? LANGUAGES[0];
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (variant !== "dropdown" || !isOpen) return;
 
     const handleClickOutside = (event: MouseEvent) => {
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
@@ -37,7 +41,23 @@ export default function LanguageSwitcher() {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isOpen]);
+  }, [isOpen, variant]);
+
+  if (variant === "inline") {
+    return (
+      <div className={Styles.inline}>
+        {LANGUAGES.map(({ code, label, flag }) => (
+          <Button
+            key={code}
+            variant={code === locale ? "primary" : "secondary"}
+            ariaLabel={label}
+            onClick={() => setLocale(code)}
+            icon={<img src={flag} alt="" className={Styles.flag} />}
+          />
+        ))}
+      </div>
+    );
+  }
 
   return (
     <div className={Styles.languageSwitcher} ref={containerRef}>

@@ -3,6 +3,12 @@
   display: inline-flex;
 }
 
+.inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
 .trigger {
   display: flex;
   align-items: center;
@@ -11,8 +17,8 @@
 }
 
 .flag {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   object-fit: cover;
 }
