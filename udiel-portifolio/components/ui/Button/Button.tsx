@@ -14,6 +14,7 @@ interface ButtonProps {
   className?: string;
   onClick?: () => void;
   ariaLabel?: string;
+  ariaExpanded?: boolean;
 }
 
 export default function Button({
@@ -27,6 +28,7 @@ export default function Button({
   className,
   onClick,
   ariaLabel,
+  ariaExpanded,
 }: ButtonProps) {
   const baseStyles =
     "inline-flex items-center justify-evenly px-4 gap-2 py-4 rounded-full font-medium transition-colors uppercase text-x";
@@ -50,6 +52,8 @@ export default function Button({
       rel={rel}
       onClick={onClick ? (e) => { e.preventDefault(); onClick(); } : undefined}
       aria-label={ariaLabel}
+      aria-haspopup={ariaExpanded !== undefined ? "menu" : undefined}
+      aria-expanded={ariaExpanded}
       className={`${Styles.base} ${baseStyles} ${variants[variant]} ${className ?? ""}`.trim()}
     >
       {icon && <span className="text-lg">{icon}</span>}

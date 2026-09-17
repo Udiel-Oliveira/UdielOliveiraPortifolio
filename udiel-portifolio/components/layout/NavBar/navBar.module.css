@@ -26,19 +26,7 @@
   gap: 0.75rem;
   padding: 0.15rem;
 }
-@keyframes expandNav {
-  0% {
-    width: 60px;
-    height: 60px;
-    border-radius: 999px;
-  }
-  100% {
-    width: 505px;
-    height: auto;
-    border-radius: 500px;
-    padding: 0.15rem;
-  }
-}
+
 
 .navLinks {
   display: flex;
@@ -55,14 +43,10 @@
 }
 
 .navLinks.open {
-  width: 300px;
+  width: fit-content;
   height: auto;
   border-radius: 500px;
   padding: 0.15rem;
-}
-
-.navLinks.animate {
-  animation: expandNav 0.8s ease forwards;
 }
 
 /* RESPONSIVIDADE MOBILE */
@@ -86,21 +70,6 @@
   .navLinks.open::-webkit-scrollbar {
   display: none;            
 }
-
-  @keyframes expandNav {
-    0% {
-      width: 50px;
-      height: 50px;
-      border-radius: 999px;
-    }
-    100% {
-      width: 60%;
-      height: auto;
-      border-radius: 50px;
-      padding: 0.1rem;
-    }
-  }
-
   .rightGroup {
     display: none;
   }
@@ -120,19 +89,5 @@
   .navLinks.open {
     width: 60%;
     overflow-x: scroll;
-  }
-
-  @keyframes expandNav {
-    0% {
-      width: 45px;
-      height: 45px;
-      border-radius: 999px;
-    }
-    100% {
-      width: 60%;
-      height: auto;
-      border-radius: 50px;
-      padding: 0.08rem;
-    }
   }
 }

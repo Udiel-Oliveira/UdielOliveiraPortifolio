@@ -138,7 +138,7 @@ export const translations: Record<Locale, Dictionary> = {
   es: {
     nav: {
       home: "Inicio",
-      about: "Sobre mí",
+      about: "Sobre",
       certifications: "Certificaciones",
       projects: "Proyectos",
     },
