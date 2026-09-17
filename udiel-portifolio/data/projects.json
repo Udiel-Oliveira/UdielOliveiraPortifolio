@@ -8,7 +8,7 @@
       "description": "Desenvolvimento de site institucional completo com foco em UX, performance e SEO: CTAs estratégicos, formulário de contato com validação e blog para marketing de conteúdo. Configuração, deploy e gerenciamento do ambiente de produção na Hostinger, com melhorias de segurança e aplicação de boas práticas de SEO técnico.",
       "image": "/assets/portfolio.png",
       "link": "https://legadoscontabilidade.com.br/",
-      
+      "github": "https://github.com/Legados-Contabilidade/legados_contabilidade",
       "tecnologias": [
         "nextjs",
         "react",

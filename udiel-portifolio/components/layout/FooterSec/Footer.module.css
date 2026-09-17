@@ -50,3 +50,9 @@
         line-height: 3rem;
     }
 }
+.copyright{
+  font-size: 1rem;
+  color: var(--color-dark);
+  text-align: center;
+  margin-top: 1rem; 
+}

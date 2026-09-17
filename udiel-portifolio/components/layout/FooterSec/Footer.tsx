@@ -87,8 +87,10 @@ export default function Footer() {
             WhatsApp
           </Button>
         </div>
-        &copy; {new Date().getFullYear()} Udiel Oliveira. Todos os direitos
-        reservados.
+        <p className={Styles.copyright}>
+          &copy; {new Date().getFullYear()} Udiel Oliveira. Todos os direitos
+          reservados.
+        </p>
       </div>
     </footer>
   );
