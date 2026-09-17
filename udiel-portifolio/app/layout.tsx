@@ -18,11 +18,13 @@ const jaldi = Jaldi({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://udielportifolio.vercel.app"),
-  title: "Udiel Oliveira | Dev",
+  title: "Udiel Oliveira | Portfólio de Desenvolvedor Front End",
   description:
     "Portfólio de Udiel Oliveira, desenvolvedor Front End com foco em React, Next.js e TypeScript. Conheça meus projetos, certificações e entre em contato.",
   keywords: [
     "Udiel Oliveira",
+    "Udiel Oliveira Portfólio",
+    "Udiel Portifolio",
     "Desenvolvedor Front End",
     "React",
     "Next.js",
@@ -33,8 +35,11 @@ export const metadata: Metadata = {
     { name: "Udiel Oliveira", url: "https://github.com/Udiel-Oliveira" },
   ],
   creator: "Udiel Oliveira",
+  alternates: {
+    canonical: "https://udielportifolio.vercel.app",
+  },
   openGraph: {
-    title: "Udiel Oliveira | Desenvolvedor Front End",
+    title: "Udiel Oliveira | Portfólio de Desenvolvedor Front End",
     description:
       "Conheça o portfólio de Udiel Oliveira — projetos, habilidades e formas de contato.",
     url: "https://udielportifolio.vercel.app",
@@ -52,7 +57,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Udiel Oliveira | Desenvolvedor Front End",
+    title: "Udiel Oliveira | Portfólio de Desenvolvedor Front End",
     description:
       "Conheça o portfólio de Udiel Oliveira — projetos, habilidades e formas de contato.",
   },
@@ -60,6 +65,29 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Udiel Oliveira",
+  url: "https://udielportifolio.vercel.app",
+  jobTitle: "Desenvolvedor Front End",
+  description:
+    "Portfólio de Udiel Oliveira, desenvolvedor Front End com foco em React, Next.js e TypeScript.",
+  sameAs: [
+    "https://github.com/Udiel-Oliveira",
+    "https://www.linkedin.com/in/udiel-oliveira",
+  ],
+  knowsAbout: [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "HTML",
+    "CSS",
+  ],
 };
 
 export default function RootLayout({
@@ -73,6 +101,10 @@ export default function RootLayout({
       className={`${inter.variable} ${jaldi.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <LanguageProvider>{children}</LanguageProvider>
         <SpeedInsights />
       </body>

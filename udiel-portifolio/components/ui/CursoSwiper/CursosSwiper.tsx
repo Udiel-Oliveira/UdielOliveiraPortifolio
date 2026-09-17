@@ -215,9 +215,9 @@ export default function CursoSwiper() {
                     <Info />
                     <h2>{t.certifications.modal.details}</h2>
                   </div>
-                  <h1 className={Styles.modalTitle}>
+                  <h2 className={Styles.modalTitle}>
                     {pickLocale(selectedCursoInfo.nome, locale)}
-                  </h1>
+                  </h2>
                   <p className={Styles.modalDescription}>
                     {pickLocale(selectedCursoInfo.descricao, locale)}
                   </p>

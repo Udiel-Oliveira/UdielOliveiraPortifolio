@@ -64,7 +64,7 @@ export default function Footer() {
     <footer className={Styles.footer} id="footer">
       <div className={Styles.footerContainer}>
         <Logo />
-        <h1 key={locale} id="quotes">{t.footer.heading}</h1>
+        <h2 key={locale} id="quotes">{t.footer.heading}</h2>
         <div className={Styles.contactInfo}>
           <Button
             href={email}
