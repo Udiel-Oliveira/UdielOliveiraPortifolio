@@ -2,10 +2,18 @@
   "projects": [
     {
       "id": 1,
-      "category": "Site Institucional",
+      "category": {
+        "pt": "Site Institucional",
+        "en": "Institutional website",
+        "es": "Sitio institucional"
+      },
       "title": "Legados Contabilidade",
       "iconProject": "/assets/ProjectsImages/LogoLegados.png",
-      "description": "Desenvolvimento de site institucional completo com foco em UX, performance e SEO: CTAs estratégicos, formulário de contato com validação e blog para marketing de conteúdo. Configuração, deploy e gerenciamento do ambiente de produção na Hostinger, com melhorias de segurança e aplicação de boas práticas de SEO técnico.",
+      "description": {
+        "pt": "Desenvolvimento de site institucional completo com foco em UX, performance e SEO: CTAs estratégicos, formulário de contato com validação e blog para marketing de conteúdo. Configuração, deploy e gerenciamento do ambiente de produção na Hostinger, com melhorias de segurança e aplicação de boas práticas de SEO técnico.",
+        "en": "Full institutional website development focused on UX, performance and SEO: strategic CTAs, a validated contact form and a blog for content marketing. Configured, deployed and managed the production environment on Hostinger, with security improvements and technical SEO best practices.",
+        "es": "Desarrollo de un sitio institucional completo con foco en UX, rendimiento y SEO: CTAs estratégicos, formulario de contacto con validación y blog para marketing de contenidos. Configuración, despliegue y gestión del entorno de producción en Hostinger, con mejoras de seguridad y buenas prácticas de SEO técnico."
+      },
       "image": "/assets/portfolio.png",
       "link": "https://legadoscontabilidade.com.br/",
       "github": "https://github.com/Legados-Contabilidade/legados_contabilidade",
@@ -26,10 +34,18 @@
     },
     {
       "id": 2,
-      "category": "Landing Page",
+      "category": {
+        "pt": "Landing Page",
+        "en": "Landing page",
+        "es": "Landing page"
+      },
       "title": "Projeto Ambar",
       "iconProject": "https://ambar-project.vercel.app/icon/logoAmbar.svg",
-      "description": "Site desenvolvido para meu TCC da ETEC, explorando conceitos de programação voltados para eficiência energética e boas práticas de desenvolvimento.",
+      "description": {
+        "pt": "Site desenvolvido para meu TCC da ETEC, explorando conceitos de programação voltados para eficiência energética e boas práticas de desenvolvimento.",
+        "en": "Website built for my ETEC capstone project, exploring programming concepts focused on energy efficiency and development best practices.",
+        "es": "Sitio desarrollado para mi proyecto final de la ETEC, explorando conceptos de programación enfocados en eficiencia energética y buenas prácticas de desarrollo."
+      },
       "image": "/assets/portfolio.png",
       "link": "https://ambar-project.vercel.app/",
       "github": "https://github.com/Ambar-Project/ambar_academy/tree/main/ambar-home",
@@ -49,10 +65,18 @@
     },
     {
       "id": 3,
-      "category": "Aplicativo Web",
+      "category": {
+        "pt": "Aplicativo Web",
+        "en": "Web application",
+        "es": "Aplicación web"
+      },
       "title": "Smart Terrarium",
       "iconProject": "/assets/ProjectsImages/LogoSmart.svg",
-      "description": "uma aplicação web para monitoramento e controle de um terrário inteligente, desenvolvido com React, Node.js. Permite visualizar dados em tempo real, configurar alertas e controlar dispositivos conectados ao terrário. ainda em fase de desenvolvimento, mas já apresenta funcionalidades básicas de monitoramento e alertas.",
+      "description": {
+        "pt": "uma aplicação web para monitoramento e controle de um terrário inteligente, desenvolvido com React, Node.js. Permite visualizar dados em tempo real, configurar alertas e controlar dispositivos conectados ao terrário. ainda em fase de desenvolvimento, mas já apresenta funcionalidades básicas de monitoramento e alertas.",
+        "en": "A web application for monitoring and controlling a smart terrarium, built with React and Node.js. It lets you view real-time data, configure alerts and control devices connected to the terrarium. Still under development, but already features basic monitoring and alerting capabilities.",
+        "es": "Una aplicación web para monitorear y controlar un terrario inteligente, desarrollada con React y Node.js. Permite visualizar datos en tiempo real, configurar alertas y controlar dispositivos conectados al terrario. Aún en desarrollo, pero ya cuenta con funcionalidades básicas de monitoreo y alertas."
+      },
       "image": "/assets/ecommerce.png",
       "link": "https://smart-terrarium.vercel.app/",
       "github": "https://github.com/Udiel-Oliveira/smart_terrarium/tree/master",

@@ -7,10 +7,12 @@ import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from "gsap/SplitText";
+import { useLanguage } from "@/lib/i18n";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function Footer() {
+  const { t, locale } = useLanguage();
   const [emailCopied, setEmailCopied] = useState(false);
   const email =
     "mailto:udiel.inacio@outlook.com?subject=Oportunidade%20de%20projeto&body=Olá%20Udiel,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade.";
@@ -57,16 +59,12 @@ export default function Footer() {
     return () => {
       split.revert(); // limpa o DOM ao desmontar
     };
-  }, []);
+  }, [locale]);
   return (
     <footer className={Styles.footer} id="footer">
       <div className={Styles.footerContainer}>
         <Logo />
-        <h1 id="quotes">
-          Vamos Construir Algo
-          <br />
-          Incrivel Juntos
-        </h1>
+        <h1 key={locale} id="quotes">{t.footer.heading}</h1>
         <div className={Styles.contactInfo}>
           <Button
             href={email}
@@ -76,7 +74,7 @@ export default function Footer() {
               window.location.href = email;
             }}
           >
-            {emailCopied ? "Email copiado!" : "Email"}
+            {emailCopied ? t.footer.emailCopied : t.footer.email}
           </Button>
           <Button
             href={whatsapp}
@@ -84,12 +82,11 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            WhatsApp
+            {t.footer.whatsapp}
           </Button>
         </div>
         <p className={Styles.copyright}>
-          &copy; {new Date().getFullYear()} Udiel Oliveira. Todos os direitos
-          reservados.
+          &copy; {new Date().getFullYear()} Udiel Oliveira. {t.footer.copyright}
         </p>
       </div>
     </footer>

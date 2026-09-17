@@ -6,6 +6,7 @@ import projectData from "@/data/projects.json";
 import { ArrowUpRight, Cross, FaceSad, GithubFill } from "akar-icons";
 import { useState } from "react";
 import Image from "next/image";
+import { useLanguage, pickLocale } from "@/lib/i18n";
 
 type Project = (typeof projectData.projects)[number];
 
@@ -13,10 +14,12 @@ function ProjectImage({
   src,
   alt,
   onClick,
+  imageUnavailableLabel,
 }: {
   src: string;
   alt: string;
   onClick: () => void;
+  imageUnavailableLabel: string;
 }) {
   const [error, setError] = useState(false);
 
@@ -24,7 +27,7 @@ function ProjectImage({
     return (
       <div className={Styles.fallback}>
         <FaceSad />
-        <span>Imagem Indisponível</span>
+        <span>{imageUnavailableLabel}</span>
       </div>
     );
   }
@@ -43,6 +46,7 @@ function ProjectImage({
 }
 
 export default function ProjectCard() {
+  const { t, locale } = useLanguage();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
 
@@ -95,6 +99,7 @@ export default function ProjectCard() {
                       setSelectedImage(image);
                       setIsModalOpen(true);
                     }}
+                    imageUnavailableLabel={t.projects.imageUnavailable}
                   />
                 </div>
               ))}
@@ -106,7 +111,7 @@ export default function ProjectCard() {
             <div className={Styles.projectHeader}>
               <div className={Styles.projectTitle}>
                 <span className={Styles.projectCategory}>
-                  {project.category}
+                  {pickLocale(project.category, locale)}
                 </span>
                 <h2 className={Styles.projectName}>{project.title}</h2>
               </div>
@@ -120,9 +125,9 @@ export default function ProjectCard() {
               </div>
             </div>
 
-            <p className={Styles.projectDescription}>{project.description}</p>
+            <p className={Styles.projectDescription}>{pickLocale(project.description, locale)}</p>
             <div className={Styles.projectTech}>
-              <h3>Tecnologias</h3>
+              <h3>{t.projects.technologies}</h3>
               <div className={Styles.badges}>
                 {project.tecnologias.map((techId) => (
                   <Badge key={techId} variant="secondary" id={techId as keyof typeof badges} />
@@ -138,7 +143,7 @@ export default function ProjectCard() {
                 rel="noopener noreferrer"
                 variant="primary"
               >
-                Visitar Projeto
+                {t.projects.visitProject}
               </Button>
               {project.github && (
                 <Button
@@ -148,7 +153,7 @@ export default function ProjectCard() {
                   rel="noopener noreferrer"
                   variant="secondary"
                 >
-                  Código Fonte
+                  {t.projects.sourceCode}
                 </Button>
               )}
             </div>

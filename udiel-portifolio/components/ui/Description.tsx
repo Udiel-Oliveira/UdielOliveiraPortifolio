@@ -4,10 +4,13 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from "gsap/SplitText";
 import Styles from "./Description.module.css";
+import { useLanguage } from "@/lib/i18n";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function Description() {
+  const { t, locale } = useLanguage();
+
   useEffect(() => {
     const quote = document.getElementById("quote");
     if (!quote) return;
@@ -36,17 +39,13 @@ export default function Description() {
     });
 
     return () => {
-      split.revert(); 
+      split.revert();
     };
-  }, []);
+  }, [locale]);
 
   return (
-    <p className={Styles.quote} id="quote">
-      Desenvolvedor em formação com foco em front-end, em constante evolução
-      técnica. Tenho conhecimentos em HTML&CSS, JavaScript, React, Next.js e
-      Node.js. Atualmente estou cursando Análise e Desenvolvimento de Sistemas
-      na Universidade Cruzeiro do Sul e busco estágio para aplicar meus
-      conhecimentos em projetos reais e crescer na área.
+    <p key={locale} className={Styles.quote} id="quote">
+      {t.about.description}
     </p>
   );
 }

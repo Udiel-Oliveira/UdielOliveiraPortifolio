@@ -20,8 +20,10 @@
   padding: 0.15rem;
 }
 */
-.languageSwitcher {
+.rightGroup {
   display: flex;
+  align-items: center;
+  gap: 0.75rem;
   padding: 0.15rem;
 }
 @keyframes expandNav {
@@ -99,7 +101,7 @@
     }
   }
 
-  .languageSwitcher {
+  .rightGroup {
     display: none;
   }
 

@@ -1,8 +1,10 @@
 "use client";
 import Button from "@/components/ui/Button/Button";
 import Logo from "@/components/ui/Logo";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher/LanguageSwitcher";
 import Styles from "./navBar.module.css";
 import { useEffect, useState, useRef } from "react";
+import { useLanguage } from "@/lib/i18n";
 import {
   Coffee,
   File,
@@ -13,6 +15,7 @@ import {
 } from "akar-icons";
 
 export default function NavBar() {
+  const { t } = useLanguage();
   const [hidden, setHidden] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const lastScrollY = useRef(0);
@@ -101,7 +104,7 @@ export default function NavBar() {
           variant={navButtonVariant("hero")}
           className={navButtonClass("hero")}
         >
-          Inicio
+          {t.nav.home}
         </Button>
         <Button
           href="#about"
@@ -109,7 +112,7 @@ export default function NavBar() {
           variant={navButtonVariant("about")}
           className={navButtonClass("about")}
         >
-          Sobre
+          {t.nav.about}
         </Button>
         <Button
           href="#certifications"
@@ -117,7 +120,7 @@ export default function NavBar() {
           variant={navButtonVariant("certifications")}
           className={navButtonClass("certifications")}
         >
-          Certificações
+          {t.nav.certifications}
         </Button>
         <Button
           href="#projects"
@@ -125,11 +128,12 @@ export default function NavBar() {
           variant={navButtonVariant("projects")}
           className={navButtonClass("projects")}
         >
-          Projetos
+          {t.nav.projects}
         </Button>
       </div>
 
-      <div className={Styles.languageSwitcher}>
+      <div className={Styles.rightGroup}>
+        <LanguageSwitcher />
         <Logo />
       </div>
     </nav>

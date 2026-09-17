@@ -1,16 +1,20 @@
+"use client";
 import Badge from "@/components/ui/Badge";
 import Styles from "./About.module.css";
 import Description from "@/components/ui/Description";
 import Button from "@/components/ui/Button/Button";
 import { File } from "akar-icons";
 import Image from "next/image";
+import { useLanguage } from "@/lib/i18n";
 
 export default function About() {
+  const { t } = useLanguage();
+
   return (
     <section id="about" className={Styles.section}>
       <div className={Styles.aboutContainer}>
         <Button icon={<File />} variant="title">
-          Sobre
+          {t.about.title}
         </Button>
         <div className={Styles.skills}>
           <Badge id="javascript" />

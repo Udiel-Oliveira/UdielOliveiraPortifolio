@@ -5,17 +5,23 @@ import SplitText from "gsap/SplitText";
 import Button from "@/components/ui/Button/Button";
 import Style from "./HeroSec.module.css";
 import { Download, Phone } from "akar-icons";
+import { useLanguage } from "@/lib/i18n";
 
 gsap.registerPlugin(SplitText);
 
 export default function Hero() {
+  const { t, locale } = useLanguage();
+
   useEffect(() => {
+    let splitH1: SplitText | undefined;
+    let splitH2: SplitText | undefined;
+
     document.fonts.ready.then(() => {
       const h2 = document.querySelector("h2.animate-me");
       const h1 = document.querySelector("h1.animate-me");
 
       if (h2) {
-        const splitH2 = new SplitText(h2, { type: "words", aria: "hidden" });
+        splitH2 = new SplitText(h2, { type: "words", aria: "hidden" });
         gsap.from(splitH2.words, {
           opacity: 0,
           duration: 1.5,
@@ -26,7 +32,7 @@ export default function Hero() {
       }
 
       if (h1) {
-        const splitH1 = new SplitText(h1, { type: "words", aria: "hidden" });
+        splitH1 = new SplitText(h1, { type: "words", aria: "hidden" });
         gsap.from(splitH1.words, {
           opacity: 0,
           duration: 1.8,
@@ -37,18 +43,20 @@ export default function Hero() {
         });
       }
     });
-  }, []);
+
+    return () => {
+      splitH1?.revert();
+      splitH2?.revert();
+    };
+  }, [locale]);
 
   return (
     <section id="hero" className={Style.hero}>
-      <h2 className="animate-me">👋Olá, meu nome é Udiel! E eu sou um...</h2>
-      <h1 className="animate-me">
-        Desenvolvedor
-        <br /> Front End
-      </h1>
+      <h2 key={`greeting-${locale}`} className="animate-me">{t.hero.greeting}</h2>
+      <h1 key={`title-${locale}`} className="animate-me">{t.hero.title}</h1>
       <div className={Style.buttonContainer}>
         <Button href="#footer" icon={<Phone />} variant="primary">
-          Entre em contato
+          {t.hero.contactButton}
         </Button>
         <Button
           href="/Download/Curriculo_UdielOliveira.pdf"
@@ -56,7 +64,7 @@ export default function Hero() {
           icon={<Download />}
           variant="secondary"
         >
-          Baixar CV
+          {t.hero.downloadCvButton}
         </Button>
       </div>
     </section>

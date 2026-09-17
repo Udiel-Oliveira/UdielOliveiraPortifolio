@@ -22,6 +22,7 @@ import {
 // Importa o JSON
 import cursosObj from "@/data/courses.json";
 import Image from "next/image";
+import { useLanguage, pickLocale } from "@/lib/i18n";
 
 const cursos = Object.values(cursosObj);
 
@@ -30,6 +31,7 @@ const cursosDestaque = cursos.filter((curso) => curso.destaque);
 const cursosRestantes = cursos.filter((curso) => !curso.destaque);
 
 export default function CursoSwiper() {
+  const { t, locale } = useLanguage();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
   const [isInfoOpen, setIsInfoOpen] = useState(false);
@@ -78,7 +80,7 @@ export default function CursoSwiper() {
               width={500}
               height={500}
               src={curso.imagem}
-              alt={curso.nome}
+              alt={pickLocale(curso.nome, locale)}
               className={Styles.image}
             />
             <div className={Styles.action}>
@@ -156,7 +158,7 @@ export default function CursoSwiper() {
                 width={1000}
                 height={100}
                 src={curso.imagem}
-                alt={curso.nome}
+                alt={pickLocale(curso.nome, locale)}
                 className={Styles.image}
                 onClick={() => {
                   setSelectedImage(curso.imagem);
@@ -187,7 +189,7 @@ export default function CursoSwiper() {
                   onClick={() => setIsInfoOpen(true)}
                   className={Styles.detailButton}
                 >
-                  Detalhes
+                  {t.certifications.modal.details}
                 </Button>
               </div>
             </div>
@@ -211,31 +213,31 @@ export default function CursoSwiper() {
                 <div className={Styles.modalInfoContent}>
                   <div className={Styles.modalHeader}>
                     <Info />
-                    <h2>Detalhes</h2>
+                    <h2>{t.certifications.modal.details}</h2>
                   </div>
                   <h1 className={Styles.modalTitle}>
-                    {selectedCursoInfo.nome}
+                    {pickLocale(selectedCursoInfo.nome, locale)}
                   </h1>
                   <p className={Styles.modalDescription}>
-                    {selectedCursoInfo.descricao}
+                    {pickLocale(selectedCursoInfo.descricao, locale)}
                   </p>
                   <div className={Styles.detailsInfo}>
                     <p>
-                      <strong>Instituição:</strong>{" "}
+                      <strong>{t.certifications.modal.institution}</strong>{" "}
                       <Button icon={<Diamond />} className={Styles.badgeCurso}>
                         {selectedCursoInfo.instituicao}
                       </Button>
                     </p>
                     <p>
-                      <strong>Data</strong>
+                      <strong>{t.certifications.modal.date}</strong>
                       <Button icon={<Calendar />} className={Styles.badgeCurso}>
                         {selectedCursoInfo.data}
                       </Button>
                     </p>
                     <p>
-                      <strong>Status:</strong>
+                      <strong>{t.certifications.modal.status}</strong>
                       <Button className={Styles.badgeCurso}>
-                        {selectedCursoInfo.status}
+                        {pickLocale(selectedCursoInfo.status, locale)}
                       </Button>
                     </p>
                   </div>
@@ -249,7 +251,7 @@ export default function CursoSwiper() {
                     className={Styles.closeButtonDetailInfo}
                     variant="secondary"
                   >
-                    Fechar
+                    {t.certifications.modal.close}
                   </Button>
                   <Button
                     href={selectedCursoInfo.link}
@@ -257,7 +259,7 @@ export default function CursoSwiper() {
                     target="_blank"
                     variant="secondary"
                   >
-                    Link Certificado
+                    {t.certifications.modal.certificateLink}
                   </Button>
                 </div>
               </div>

@@ -3,6 +3,7 @@ import { Inter, Jaldi } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { LanguageProvider } from "@/lib/i18n";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -72,7 +73,7 @@ export default function RootLayout({
       className={`${inter.variable} ${jaldi.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
         <SpeedInsights />
       </body>
       <Analytics />
